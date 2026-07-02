@@ -82,6 +82,40 @@ export const prospectos: Prospecto[] = [
     notas:
       "4,9★ (258 opiniones). Servicios: afeitado, alisado, balayage, tintura, cortes, peinados, tratamientos con keratina. Ofrecen café o cerveza según la hora. Muy recomendada boca en boca.",
   },
+  {
+    id: "4",
+    fecha: "2026-07-02",
+    rubro: "Restaurante",
+    nombre: "Shami Shawarma Belgrano",
+    zona: "Belgrano, CABA",
+    direccion: "Monroe 2842, C1428BLV, CABA",
+    telefono: "011 2534-8382",
+    email: "",
+    redes: "",
+    tieneSitio: "No",
+    estado: "Nuevo",
+    fechaContacto: "",
+    proximoSeguimiento: "",
+    notas:
+      "4,8★ (122 opiniones). Rango de precio $10.000-20.000 por persona. Comida árabe/shawarma. Reseñas destacan los shawarmas, buena atención, patio lindo, opciones vegetarianas y celíacas.",
+  },
+  {
+    id: "5",
+    fecha: "2026-07-02",
+    rubro: "Restaurante",
+    nombre: "Restaurante Muky",
+    zona: "Florida, Vicente López (GBA)",
+    direccion: "Av. Maipú 1499, B1602ABO, Florida, Pcia. de Buenos Aires",
+    telefono: "011 4791-9090",
+    email: "",
+    redes: "",
+    tieneSitio: "No",
+    estado: "Nuevo",
+    fechaContacto: "",
+    proximoSeguimiento: "",
+    notas:
+      "4,2★ (6.868 opiniones). Rango de precio $20.000-50.000 por persona. Cocina argentina, menú extenso (pizzas, milanesas, pastas, parrilla). Hora feliz, buenos cócteles, menú para niños. Reseñas destacan rabas y buena atención.",
+  },
 ];
 
 export type ClienteWeb = {
