@@ -8,7 +8,7 @@ export function LogoCloud() {
     <section className="border-y border-ink-700 py-10">
       <Container>
         <p className="mb-6 text-center font-mono text-xs uppercase tracking-[0.18em] text-bone-dim">
-          Trusted by operators who'd rather build than babysit
+          La confianza de equipos que prefieren construir antes que cuidar planillas
         </p>
       </Container>
       <div className="overflow-hidden">

@@ -31,7 +31,7 @@ export function buildMetadata({
       url,
       siteName: brand.name,
       type: "website",
-      locale: "en_US",
+      locale: "es_419",
       images: [
         {
           url: `${SITE_URL}/og-image.png`,

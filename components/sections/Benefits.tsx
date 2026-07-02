@@ -11,9 +11,9 @@ export function Benefits() {
     <section className="py-20 sm:py-28">
       <Container>
         <SectionHeading
-          eyebrow="Why Volta"
-          title="Built like software. Priced like a service."
-          description="Most agencies sell hours. We sell outcomes — systems engineered to run unattended, owned outright by you, and measured against the time and revenue they actually produce."
+          eyebrow="Por qué Volta"
+          title="Construido como software. Con el precio de un servicio."
+          description="La mayoría de las agencias vende horas. Nosotros vendemos resultados — sistemas diseñados para funcionar solos, de tu propiedad absoluta, y medidos contra el tiempo e ingresos que realmente generan."
         />
 
         <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">

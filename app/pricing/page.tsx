@@ -9,17 +9,17 @@ import { buildMetadata } from "@/lib/seo";
 import { pricingTiers, maintenancePlans, faqs } from "@/lib/data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Pricing",
+  title: "Precios",
   description:
-    "Three fixed-scope pricing tiers for AI automation, chatbots, and websites — Starter, Professional, and Enterprise — with transparent timelines and deliverables.",
+    "Tres planes de precio fijo para automatización con IA, chatbots y sitios web — Starter, Professional y Enterprise — con cronogramas y entregables transparentes.",
   path: "/pricing",
 });
 
 const pricingFaqQuestions = [
-  "How long does a typical project take?",
-  "Who owns the systems and code after the project is done?",
-  "How is pricing determined for Enterprise projects?",
-  "Do you sign contracts and NDAs?",
+  "¿Cuánto tiempo lleva un proyecto típico?",
+  "¿Quién es dueño de los sistemas y el código después del proyecto?",
+  "¿Cómo se determina el precio de los proyectos Enterprise?",
+  "¿Firman contratos y acuerdos de confidencialidad?",
 ];
 const pricingFaqs = faqs.filter((f) => pricingFaqQuestions.includes(f.question));
 
@@ -28,14 +28,15 @@ export default function PricingPage() {
     <>
       <section className="pt-20 pb-10 sm:pt-28">
         <Container className="max-w-3xl text-center mx-auto">
-          <p className="eyebrow mb-4">Pricing</p>
+          <p className="eyebrow mb-4">Precios</p>
           <h1 className="text-4xl font-medium leading-tight tracking-tight text-bone sm:text-5xl">
-            Fixed scope. Fixed price. No hourly surprises.
+            Alcance fijo. Precio fijo. Sin sorpresas por hora.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-bone-muted">
-            Every project is quoted as a fixed-price engagement after a
-            short discovery call — never open-ended hourly billing. Pick the
-            tier closest to your needs below; we'll fine-tune scope together.
+            Cada proyecto se cotiza como un compromiso de precio fijo
+            después de una breve llamada de descubrimiento — nunca
+            facturación por hora sin límite. Elegí el plan más cercano a
+            tus necesidades abajo; ajustamos el alcance juntos.
           </p>
         </Container>
       </section>
@@ -54,7 +55,7 @@ export default function PricingPage() {
               >
                 {tier.highlighted && (
                   <span className="absolute -top-3 left-8 rounded-full bg-volt-500 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-white">
-                    Most popular
+                    Más elegido
                   </span>
                 )}
                 <h2 className="text-xl font-medium text-bone">{tier.name}</h2>
@@ -70,16 +71,16 @@ export default function PricingPage() {
 
                 <dl className="mt-6 grid grid-cols-2 gap-4 border-y border-ink-700 py-4 text-xs">
                   <div>
-                    <dt className="text-bone-dim">Timeline</dt>
+                    <dt className="text-bone-dim">Tiempo estimado</dt>
                     <dd className="mt-1 font-medium text-bone">{tier.timeline}</dd>
                   </div>
                   <div>
-                    <dt className="text-bone-dim">Best for</dt>
+                    <dt className="text-bone-dim">Ideal para</dt>
                     <dd className="mt-1 font-medium text-bone leading-snug">{tier.bestFor}</dd>
                   </div>
                 </dl>
 
-                <p className="eyebrow mt-6 mb-3">Features</p>
+                <p className="eyebrow mt-6 mb-3">Características</p>
                 <ul className="space-y-2.5">
                   {tier.features.map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-sm text-bone-muted">
@@ -89,7 +90,7 @@ export default function PricingPage() {
                   ))}
                 </ul>
 
-                <p className="eyebrow mt-6 mb-3">Deliverables</p>
+                <p className="eyebrow mt-6 mb-3">Entregables</p>
                 <ul className="space-y-2.5">
                   {tier.deliverables.map((d) => (
                     <li key={d} className="flex items-start gap-2.5 text-sm text-bone-muted">
@@ -113,8 +114,8 @@ export default function PricingPage() {
           </div>
 
           <p className="mt-8 text-center text-sm text-bone-dim">
-            Need something between tiers, or a project that spans multiple
-            services? <Link href="/contact" className="text-volt-400 underline underline-offset-4">Tell us what you're working with</Link> and we'll scope it properly.
+            ¿Necesitás algo entre planes, o un proyecto que abarque varios
+            servicios? <Link href="/contact" className="text-volt-400 underline underline-offset-4">Contanos con qué estás trabajando</Link> y lo cotizamos bien.
           </p>
         </Container>
       </section>
@@ -122,9 +123,9 @@ export default function PricingPage() {
       <section className="py-20 sm:py-28">
         <Container>
           <SectionHeading
-            eyebrow="After launch"
-            title="Monthly maintenance plans"
-            description="Keep systems monitored, optimized, and evolving after launch — entirely optional, never required."
+            eyebrow="Después del lanzamiento"
+            title="Planes de mantenimiento mensual"
+            description="Mantené los sistemas monitoreados, optimizados y en evolución después del lanzamiento — totalmente opcional, nunca obligatorio."
           />
           <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
             {maintenancePlans.map((plan) => (

@@ -23,7 +23,7 @@ export function Hero() {
         >
           <span className="flex items-center gap-1.5 rounded-full border border-ink-500 bg-ink-800/80 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-bone-muted">
             <span className="h-1.5 w-1.5 rounded-full bg-mint animate-pulse-soft" />
-            Currently onboarding Q3 2026 clients
+            Actualmente incorporando clientes Q3 2026
           </span>
         </motion.div>
 
@@ -35,8 +35,8 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.1, ease }}
               className="text-4xl font-medium leading-[1.08] tracking-tight text-bone sm:text-5xl lg:text-6xl"
             >
-              We build the systems that run your{" "}
-              <span className="gradient-text">business while you sleep.</span>
+              Construimos los sistemas que hacen funcionar tu{" "}
+              <span className="gradient-text">negocio mientras dormís.</span>
             </motion.h1>
 
             <motion.p
@@ -45,9 +45,9 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.25, ease }}
               className="mt-6 max-w-xl text-lg leading-relaxed text-bone-muted"
             >
-              Volta designs and ships custom AI automation, chatbots, and
-              high-converting websites for ambitious companies — fully
-              built, fully integrated, live in 2–6 weeks.
+              Volta diseña y lanza automatización con IA, chatbots y sitios web
+              de alta conversión a medida para empresas ambiciosas — totalmente
+              construidos, totalmente integrados, en vivo en 2 a 6 semanas.
             </motion.p>
 
             <motion.div
@@ -57,12 +57,12 @@ export function Hero() {
               className="mt-9 flex flex-col gap-3 sm:flex-row"
             >
               <Link href="/book-a-call" className="btn-primary">
-                Book a free strategy call
+                Reservar una llamada de estrategia gratis
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
               <Link href="/case-studies" className="btn-secondary">
                 <Sparkles className="h-4 w-4" />
-                See client results
+                Ver resultados de clientes
               </Link>
             </motion.div>
 
@@ -72,7 +72,7 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.55 }}
               className="mt-6 font-mono text-xs text-bone-dim"
             >
-              No contracts longer than the work itself. You own everything we build.
+              Sin contratos más largos que el trabajo en sí. Vos sos dueño de todo lo que construimos.
             </motion.p>
           </div>
 

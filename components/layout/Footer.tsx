@@ -44,7 +44,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow mb-4">Company</p>
+            <p className="eyebrow mb-4">Empresa</p>
             <ul className="space-y-3">
               {footerNav.company.map((item) => (
                 <li key={item.href}>
@@ -60,7 +60,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow mb-4">Services</p>
+            <p className="eyebrow mb-4">Servicios</p>
             <ul className="space-y-3">
               {footerNav.services.map((item) => (
                 <li key={item.href}>
@@ -94,7 +94,7 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-ink-700 pt-8 text-xs text-bone-dim md:flex-row md:items-center">
           <p>
-            © {new Date().getFullYear()} {brand.legalName}. All rights reserved.
+            © {new Date().getFullYear()} {brand.legalName}. Todos los derechos reservados.
           </p>
           <p className="font-mono">{brand.address}</p>
         </div>

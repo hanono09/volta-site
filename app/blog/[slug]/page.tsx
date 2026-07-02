@@ -24,7 +24,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 }
 
 function formatDate(dateStr: string) {
-  return new Date(dateStr).toLocaleDateString("en-US", {
+  return new Date(dateStr).toLocaleDateString("es-AR", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -59,7 +59,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         <Container className="max-w-2xl">
           <Link href="/blog" className="btn-ghost">
             <ArrowLeft className="h-4 w-4" />
-            All articles
+            Todos los artículos
           </Link>
 
           <div className="mt-8 flex items-center gap-3 font-mono text-[11px] uppercase tracking-wider text-bone-dim">

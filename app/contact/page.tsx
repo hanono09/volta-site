@@ -6,16 +6,16 @@ import { buildMetadata } from "@/lib/seo";
 import { brand } from "@/lib/data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact",
-  description: "Get in touch with Volta about an AI automation, chatbot, or website project.",
+  title: "Contacto",
+  description: "Contactate con Volta sobre un proyecto de automatización con IA, chatbot o sitio web.",
   path: "/contact",
 });
 
 const details = [
   { icon: Mail, label: "Email", value: brand.email, href: `mailto:${brand.email}` },
-  { icon: MessageCircle, label: "WhatsApp", value: "Message us directly", href: "#" },
-  { icon: MapPin, label: "Based in", value: brand.address },
-  { icon: Clock, label: "Response time", value: "Within 1 business day" },
+  { icon: MessageCircle, label: "WhatsApp", value: "Escribinos directamente", href: "#" },
+  { icon: MapPin, label: "Ubicación", value: brand.address },
+  { icon: Clock, label: "Tiempo de respuesta", value: "Dentro de un día hábil" },
 ];
 
 export default function ContactPage() {
@@ -24,15 +24,16 @@ export default function ContactPage() {
       <Container>
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <p className="eyebrow mb-4">Contact</p>
+            <p className="eyebrow mb-4">Contacto</p>
             <h1 className="text-4xl font-medium leading-tight tracking-tight text-bone sm:text-5xl">
-              Tell us what's slowing you down.
+              Contanos qué te está frenando.
             </h1>
             <p className="mt-5 text-base leading-relaxed text-bone-muted">
-              Whether you've got a fully scoped project or just a hunch that
-              something should be automated, send us the details. We'll
-              reply with a clear, honest take — even if that take is "this
-              probably isn't worth automating yet."
+              Ya sea que tengas un proyecto completamente definido o solo la
+              sospecha de que algo debería automatizarse, mandanos los
+              detalles. Te vamos a responder con una opinión clara y
+              honesta — incluso si esa opinión es "esto probablemente
+              todavía no vale la pena automatizarlo".
             </p>
 
             <div className="mt-10 space-y-5">

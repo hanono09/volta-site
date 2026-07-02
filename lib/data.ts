@@ -1,63 +1,63 @@
 // lib/data.ts
-// Single source of truth for site content. Edit copy here — components stay dumb.
+// Fuente única de contenido del sitio. Editá el copy aquí — los componentes son "tontos".
 
 export const brand = {
   name: "Volta",
   legalName: "Volta Automation, LLC",
   domain: "voltaautomation.com",
-  tagline: "We build the systems that run your business while you sleep.",
-  shortTagline: "AI automation for companies that hate wasted hours.",
+  tagline: "Construimos los sistemas que hacen funcionar tu negocio mientras dormís.",
+  shortTagline: "Automatización con IA para empresas que odian perder horas.",
   description:
-    "Volta designs, builds, and ships custom AI automation, chatbots, websites, and internal tooling for ambitious companies — live in 2–6 weeks.",
-  email: "hello@voltaautomation.com",
+    "Volta diseña, construye y lanza automatización con IA, chatbots, sitios web y herramientas internas a medida para empresas ambiciosas — en vivo en 2 a 6 semanas.",
+  email: "hola@voltaautomation.com",
   phone: "+1 (555) 014-2024",
-  address: "Austin, TX — working with clients worldwide",
+  address: "Austin, TX — trabajamos con clientes en todo el mundo",
   founded: "2022",
 };
 
 export const nav = [
-  { label: "Services", href: "/services" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "About", href: "/about" },
+  { label: "Servicios", href: "/services" },
+  { label: "Precios", href: "/pricing" },
+  { label: "Casos de éxito", href: "/case-studies" },
+  { label: "Nosotros", href: "/about" },
   { label: "Blog", href: "/blog" },
 ];
 
 export const footerNav = {
   company: [
-    { label: "About", href: "/about" },
-    { label: "Case Studies", href: "/case-studies" },
-    { label: "Testimonials", href: "/testimonials" },
+    { label: "Nosotros", href: "/about" },
+    { label: "Casos de éxito", href: "/case-studies" },
+    { label: "Testimonios", href: "/testimonials" },
     { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "/contact" },
+    { label: "Contacto", href: "/contact" },
   ],
   services: [
-    { label: "AI Automation", href: "/services#automation" },
-    { label: "AI Chatbots", href: "/services#chatbots" },
-    { label: "Websites & Landing Pages", href: "/services#websites" },
-    { label: "CRM Integrations", href: "/services#crm" },
-    { label: "WhatsApp Automation", href: "/services#whatsapp" },
-    { label: "Custom Dashboards", href: "/services#dashboards" },
+    { label: "Automatización con IA", href: "/services#automation" },
+    { label: "Chatbots con IA", href: "/services#chatbots" },
+    { label: "Sitios web y landing pages", href: "/services#websites" },
+    { label: "Integraciones con CRM", href: "/services#crm" },
+    { label: "Automatización de WhatsApp", href: "/services#whatsapp" },
+    { label: "Dashboards personalizados", href: "/services#dashboards" },
   ],
   legal: [
-    { label: "Privacy Policy", href: "/legal/privacy-policy" },
-    { label: "Terms of Service", href: "/legal/terms" },
-    { label: "Cookie Policy", href: "/legal/cookies" },
+    { label: "Política de privacidad", href: "/legal/privacy-policy" },
+    { label: "Términos de servicio", href: "/legal/terms" },
+    { label: "Política de cookies", href: "/legal/cookies" },
   ],
 };
 
 export const stats = [
-  { value: "140+", label: "Automations shipped" },
-  { value: "$18.4M", label: "Client revenue influenced" },
-  { value: "62,000+", label: "Hours saved annually for clients" },
-  { value: "97%", label: "Client retention rate" },
+  { value: "140+", label: "Automatizaciones implementadas" },
+  { value: "$18.4M", label: "Ingresos de clientes influenciados" },
+  { value: "62,000+", label: "Horas ahorradas anualmente a clientes" },
+  { value: "97%", label: "Tasa de retención de clientes" },
 ];
 
 export const trustBadges = [
-  "SOC 2 — aligned practices",
-  "GDPR compliant builds",
-  "99.9% uptime infrastructure",
-  "Avg. 11-day time to launch",
+  "Prácticas alineadas con SOC 2",
+  "Desarrollos conformes con GDPR",
+  "99.9% de disponibilidad en infraestructura",
+  "Promedio de 11 días para el lanzamiento",
 ];
 
 export const clientLogos = [
@@ -78,217 +78,217 @@ export type Service = {
   description: string;
   bullets: string[];
   outcomes: string[];
-  icon: string; // lucide icon name
+  icon: string; // nombre de ícono de lucide
 };
 
 export const services: Service[] = [
   {
     id: "automation",
-    title: "AI Automation",
+    title: "Automatización con IA",
     shortDescription:
-      "We replace manual, repetitive operations with AI-driven systems that run themselves.",
+      "Reemplazamos operaciones manuales y repetitivas con sistemas impulsados por IA que funcionan solos.",
     description:
-      "Most companies lose 15–30 hours a week to manual data entry, follow-ups, approvals, and copy-pasting between tools. We map your operations end-to-end, then build automated workflows that connect your stack — CRM, email, calendar, accounting, support — into one system that acts without you. No more babysitting spreadsheets.",
+      "La mayoría de las empresas pierden entre 15 y 30 horas por semana en ingreso manual de datos, seguimientos, aprobaciones y copiar-pegar entre herramientas. Mapeamos tus operaciones de punta a punta y luego construimos flujos automatizados que conectan tu stack — CRM, email, calendario, contabilidad, soporte — en un solo sistema que actúa sin que vos tengas que hacer nada. Se acabó cuidar planillas de cálculo.",
     bullets: [
-      "Full operations audit and automation roadmap",
-      "Custom workflows built in n8n, Make, or Zapier (your choice)",
-      "AI agents that read, summarize, route, and act on incoming data",
-      "Document generation, invoicing, and reporting on autopilot",
-      "Error monitoring and alerting built into every workflow",
+      "Auditoría completa de operaciones y hoja de ruta de automatización",
+      "Flujos personalizados construidos en n8n, Make o Zapier (a tu elección)",
+      "Agentes de IA que leen, resumen, enrutan y actúan sobre datos entrantes",
+      "Generación de documentos, facturación y reportes en modo automático",
+      "Monitoreo de errores y alertas integrados en cada flujo",
     ],
     outcomes: [
-      "Cut manual admin work by 60–90%",
-      "Same-day response times instead of multi-day backlogs",
-      "Fewer human errors in repetitive processes",
+      "Reducí el trabajo administrativo manual entre un 60% y 90%",
+      "Tiempos de respuesta el mismo día en lugar de acumulación de días",
+      "Menos errores humanos en procesos repetitivos",
     ],
     icon: "Workflow",
   },
   {
     id: "chatbots",
-    title: "AI Chatbots",
+    title: "Chatbots con IA",
     shortDescription:
-      "Conversational AI trained on your business that qualifies leads and answers customers 24/7.",
+      "IA conversacional entrenada en tu negocio que califica leads y responde a clientes las 24 horas.",
     description:
-      "We build custom GPT-powered chatbots trained on your products, policies, and tone of voice — deployed on your website, WhatsApp, or Instagram. They qualify leads, answer support questions, book meetings, and escalate to a human only when it matters.",
+      "Construimos chatbots personalizados con IA entrenados en tus productos, políticas y tono de voz — desplegados en tu sitio web, WhatsApp o Instagram. Califican leads, responden consultas de soporte, agendan reuniones y escalan a un humano solo cuando realmente importa.",
     bullets: [
-      "Trained on your docs, FAQs, pricing, and brand voice",
-      "Lead qualification with CRM hand-off",
-      "Multi-language support out of the box",
-      "Human hand-off with full conversation context",
-      "Deployed on web, WhatsApp, Instagram, or SMS",
+      "Entrenado con tus documentos, preguntas frecuentes, precios y voz de marca",
+      "Calificación de leads con traspaso al CRM",
+      "Soporte multi-idioma de fábrica",
+      "Traspaso a un humano con todo el contexto de la conversación",
+      "Desplegado en web, WhatsApp, Instagram o SMS",
     ],
     outcomes: [
-      "Instant response time, day or night",
-      "30–50% more qualified leads captured",
-      "Support team freed from repetitive questions",
+      "Tiempo de respuesta instantáneo, de día o de noche",
+      "30–50% más leads calificados capturados",
+      "Equipo de soporte liberado de preguntas repetitivas",
     ],
     icon: "MessageSquare",
   },
   {
     id: "websites",
-    title: "High-Converting Websites & Landing Pages",
+    title: "Sitios web y landing pages de alta conversión",
     shortDescription:
-      "Premium, fast, conversion-engineered websites built on modern infrastructure.",
+      "Sitios web premium, rápidos y diseñados para convertir, sobre infraestructura moderna.",
     description:
-      "We design and build websites the way product teams build software — researched, tested, and optimized for conversion, not just appearance. Every site is built on Next.js for sub-second load times, ships with SEO baked in, and is structured around a single clear goal: turning visitors into customers.",
+      "Diseñamos y construimos sitios web como lo hace un equipo de producto — investigados, probados y optimizados para convertir, no solo para verse bien. Cada sitio está construido en Next.js para tiempos de carga por debajo de un segundo, viene con SEO integrado de fábrica, y está estructurado alrededor de un solo objetivo claro: convertir visitantes en clientes.",
     bullets: [
-      "Custom design — never a template",
-      "Built on Next.js for speed and reliability",
-      "Conversion-focused copywriting included",
-      "SEO architecture and structured data from day one",
-      "Built-in analytics, A/B testing hooks, and CMS",
+      "Diseño a medida — nunca una plantilla genérica",
+      "Construido en Next.js para velocidad y confiabilidad",
+      "Copywriting orientado a conversión incluido",
+      "Arquitectura SEO y datos estructurados desde el día uno",
+      "Analítica integrada, hooks para A/B testing y CMS",
     ],
     outcomes: [
-      "Sub-1.5s load times on mobile",
-      "95+ Lighthouse scores across the board",
-      "Measurable lift in conversion rate post-launch",
+      "Tiempos de carga por debajo de 1.5s en mobile",
+      "Puntajes de Lighthouse 95+ en todas las categorías",
+      "Aumento medible en la tasa de conversión post-lanzamiento",
     ],
     icon: "LayoutTemplate",
   },
   {
     id: "crm",
-    title: "CRM Integrations",
+    title: "Integraciones con CRM",
     shortDescription:
-      "Your CRM becomes the single source of truth — automatically, without manual updates.",
+      "Tu CRM se convierte en la única fuente de verdad — automáticamente, sin actualizaciones manuales.",
     description:
-      "We connect HubSpot, Salesforce, Pipedrive, GoHighLevel, or Airtable to every tool you use, so leads, deals, and customer data sync automatically. No more reps manually logging calls or updating stages — your CRM updates itself based on real activity.",
+      "Conectamos HubSpot, Salesforce, Pipedrive, GoHighLevel o Airtable con cada herramienta que usás, para que leads, negociaciones y datos de clientes se sincronicen automáticamente. Se acabó que los vendedores registren llamadas manualmente o actualicen etapas — tu CRM se actualiza solo según la actividad real.",
     bullets: [
-      "Two-way sync between CRM and your existing stack",
-      "Automated lead scoring and stage progression",
-      "Custom pipelines built around your actual sales process",
-      "Deduplication and data cleanup on ingestion",
-      "Reporting dashboards pulled directly from CRM data",
+      "Sincronización bidireccional entre el CRM y tu stack actual",
+      "Puntuación de leads y avance de etapas automatizado",
+      "Pipelines personalizados según tu proceso de ventas real",
+      "Deduplicación y limpieza de datos al ingresar información",
+      "Dashboards de reportes extraídos directamente del CRM",
     ],
     outcomes: [
-      "One unified record of every customer",
-      "Sales reps spend more time selling, less time logging",
-      "Forecasting accuracy improves with clean data",
+      "Un solo registro unificado de cada cliente",
+      "Los vendedores dedican más tiempo a vender y menos a registrar datos",
+      "La precisión del pronóstico mejora con datos limpios",
     ],
     icon: "Database",
   },
   {
     id: "whatsapp",
-    title: "WhatsApp Automation",
+    title: "Automatización de WhatsApp",
     shortDescription:
-      "Sell, support, and follow up with customers on the channel they already use.",
+      "Vendé, dá soporte y hacé seguimiento a clientes en el canal que ya usan.",
     description:
-      "We build WhatsApp Business automations that handle order confirmations, appointment reminders, abandoned-cart recovery, and support — using the official WhatsApp Business API, fully compliant and fully branded.",
+      "Construimos automatizaciones de WhatsApp Business que gestionan confirmaciones de pedidos, recordatorios de citas, recuperación de carritos abandonados y soporte — usando la API oficial de WhatsApp Business, totalmente compatible y con tu marca.",
     bullets: [
-      "Official WhatsApp Business API integration",
-      "Automated order, booking, and payment confirmations",
-      "Drip sequences for re-engagement and recovery",
-      "AI-handled FAQs with human escalation",
-      "Broadcast campaigns with opt-in compliance",
+      "Integración con la API oficial de WhatsApp Business",
+      "Confirmaciones automáticas de pedidos, reservas y pagos",
+      "Secuencias de goteo para reactivación y recuperación",
+      "Preguntas frecuentes atendidas por IA con escalamiento humano",
+      "Campañas de difusión con cumplimiento de opt-in",
     ],
     outcomes: [
-      "Open rates of 90%+ versus ~20% for email",
-      "Recovered revenue from abandoned carts and no-shows",
-      "Support volume handled without adding headcount",
+      "Tasas de apertura del 90%+ frente a ~20% del email",
+      "Ingresos recuperados de carritos abandonados y ausencias",
+      "Volumen de soporte atendido sin sumar personal",
     ],
     icon: "MessageCircle",
   },
   {
     id: "appointments",
-    title: "Appointment Systems",
+    title: "Sistemas de citas y turnos",
     shortDescription:
-      "End the back-and-forth. Let clients book, reschedule, and pay automatically.",
+      "Terminá con el ida y vuelta. Que los clientes reserven, reprogramen y paguen automáticamente.",
     description:
-      "We build booking systems that connect your calendar, payment processor, and reminders into one flow — so prospects book themselves in, show up, and pay, without a single email exchanged.",
+      "Construimos sistemas de reserva que conectan tu calendario, procesador de pagos y recordatorios en un solo flujo — para que los clientes se agenden solos, se presenten y paguen, sin intercambiar un solo email.",
     bullets: [
-      "Custom booking flow matched to your brand",
-      "Calendar sync (Google, Outlook, Calendly-compatible)",
-      "Automated reminders via SMS, email, and WhatsApp",
-      "No-show reduction sequences",
-      "Deposit and payment collection at booking",
+      "Flujo de reserva personalizado según tu marca",
+      "Sincronización de calendario (Google, Outlook, compatible con Calendly)",
+      "Recordatorios automáticos por SMS, email y WhatsApp",
+      "Secuencias de reducción de ausencias",
+      "Cobro de depósitos y pagos al momento de la reserva",
     ],
     outcomes: [
-      "Up to 40% fewer no-shows",
-      "Zero manual scheduling for your team",
-      "Higher show-up rate from automated reminders",
+      "Hasta 40% menos de ausencias",
+      "Cero agendamiento manual para tu equipo",
+      "Mayor tasa de asistencia gracias a recordatorios automáticos",
     ],
     icon: "CalendarCheck",
   },
   {
     id: "support",
-    title: "AI Customer Support",
+    title: "Soporte al cliente con IA",
     shortDescription:
-      "First-line support handled by AI that actually knows your business.",
+      "Soporte de primera línea atendido por IA que realmente conoce tu negocio.",
     description:
-      "We deploy AI support agents trained on your help docs, past tickets, and policies — resolving common issues instantly and routing complex cases to your team with full context attached, so nothing gets repeated.",
+      "Desplegamos agentes de soporte con IA entrenados en tus documentos de ayuda, tickets anteriores y políticas — resolviendo problemas comunes al instante y derivando casos complejos a tu equipo con todo el contexto adjunto, para que nada se tenga que repetir.",
     bullets: [
-      "Trained on your existing knowledge base and ticket history",
-      "Resolves common tickets without human involvement",
-      "Full context hand-off when escalation is needed",
-      "Sentiment detection for priority routing",
-      "Weekly reporting on volume, resolution rate, and gaps",
+      "Entrenado con tu base de conocimiento e historial de tickets existente",
+      "Resuelve tickets comunes sin intervención humana",
+      "Traspaso con contexto completo cuando se necesita escalamiento",
+      "Detección de sentimiento para priorizar la atención",
+      "Reportes semanales sobre volumen, tasa de resolución y vacíos",
     ],
     outcomes: [
-      "Up to 70% of tickets resolved without a human",
-      "First response time under 30 seconds",
-      "Support costs scale slower than ticket volume",
+      "Hasta el 70% de los tickets resueltos sin un humano",
+      "Primera respuesta en menos de 30 segundos",
+      "Los costos de soporte crecen más lento que el volumen de tickets",
     ],
     icon: "Headset",
   },
   {
     id: "internal",
-    title: "Internal Business Automation",
+    title: "Automatización interna de negocio",
     shortDescription:
-      "The unglamorous operational work — handled, so your team can focus on the business.",
+      "El trabajo operativo poco glamoroso — resuelto, para que tu equipo se enfoque en el negocio.",
     description:
-      "Invoicing, onboarding, reporting, approvals, inventory checks — we automate the internal processes that quietly eat your team's week, tailored to how your business actually operates.",
+      "Facturación, onboarding, reportes, aprobaciones, control de inventario — automatizamos los procesos internos que silenciosamente consumen la semana de tu equipo, a la medida de cómo realmente opera tu negocio.",
     bullets: [
-      "Process mapping with your operations team",
-      "Automated onboarding and offboarding flows",
-      "Approval chains and document routing",
-      "Inventory, reporting, and reconciliation automation",
-      "Internal Slack/Teams notifications for key events",
+      "Mapeo de procesos junto a tu equipo de operaciones",
+      "Flujos automatizados de alta y baja de personal",
+      "Cadenas de aprobación y ruteo de documentos",
+      "Automatización de inventario, reportes y conciliación",
+      "Notificaciones internas en Slack/Teams para eventos clave",
     ],
     outcomes: [
-      "Days of admin work reduced to minutes",
-      "Standardized processes across teams",
-      "Fewer dropped tasks and missed approvals",
+      "Días de trabajo administrativo reducidos a minutos",
+      "Procesos estandarizados entre equipos",
+      "Menos tareas perdidas y aprobaciones olvidadas",
     ],
     icon: "Settings2",
   },
   {
     id: "workflow",
-    title: "Workflow Optimization",
+    title: "Optimización de procesos",
     shortDescription:
-      "We audit how your business actually runs, then rebuild it to run leaner.",
+      "Auditamos cómo funciona realmente tu negocio, y lo reconstruimos para que funcione más liviano.",
     description:
-      "Before we automate anything, we map your real workflows — not the org chart version. We find the bottlenecks, redundant steps, and manual handoffs, then redesign the process before layering automation on top.",
+      "Antes de automatizar cualquier cosa, mapeamos tus flujos de trabajo reales — no la versión del organigrama. Encontramos los cuellos de botella, pasos redundantes y traspasos manuales, y después rediseñamos el proceso antes de sumarle automatización.",
     bullets: [
-      "Full workflow audit and process mapping",
-      "Bottleneck and redundancy analysis",
-      "Redesigned SOPs built for automation",
-      "Tool consolidation recommendations",
-      "Change management support for your team",
+      "Auditoría completa de procesos y mapeo de flujos",
+      "Análisis de cuellos de botella y redundancias",
+      "Procedimientos rediseñados y preparados para automatizar",
+      "Recomendaciones de consolidación de herramientas",
+      "Apoyo en la gestión del cambio para tu equipo",
     ],
     outcomes: [
-      "Leaner processes before a single automation is built",
-      "Reduced tool sprawl and software spend",
-      "Faster cycle times across departments",
+      "Procesos más livianos antes de construir una sola automatización",
+      "Menos herramientas dispersas y menor gasto en software",
+      "Tiempos de ciclo más rápidos entre departamentos",
     ],
     icon: "GitMerge",
   },
   {
     id: "dashboards",
-    title: "Custom Dashboards",
+    title: "Dashboards personalizados",
     shortDescription:
-      "Real-time visibility into the numbers that actually run your business.",
+      "Visibilidad en tiempo real sobre los números que realmente mueven tu negocio.",
     description:
-      "We build custom internal dashboards that pull live data from your CRM, finance, and operations tools into one view — built for the metrics you actually track, not a generic template.",
+      "Construimos dashboards internos personalizados que traen datos en vivo de tu CRM, finanzas y herramientas operativas a una sola vista — hechos para las métricas que realmente seguís, no una plantilla genérica.",
     bullets: [
-      "Live data pulled from your existing tools",
-      "Role-based views for leadership, sales, and ops",
-      "Custom KPI tracking matched to your business",
-      "Automated weekly and monthly report generation",
-      "Hosted, secure, and accessible from anywhere",
+      "Datos en vivo extraídos de tus herramientas actuales",
+      "Vistas por rol para liderazgo, ventas y operaciones",
+      "Seguimiento de KPIs a medida de tu negocio",
+      "Generación automática de reportes semanales y mensuales",
+      "Alojado, seguro y accesible desde cualquier lugar",
     ],
     outcomes: [
-      "One source of truth instead of five spreadsheets",
-      "Faster, more confident decision-making",
-      "Hours saved on manual reporting every week",
+      "Una sola fuente de verdad en lugar de cinco planillas",
+      "Toma de decisiones más rápida y con más confianza",
+      "Horas ahorradas en reportes manuales cada semana",
     ],
     icon: "LayoutDashboard",
   },
@@ -297,76 +297,76 @@ export const services: Service[] = [
 export const process = [
   {
     step: "01",
-    title: "Discovery",
-    duration: "Days 1–3",
+    title: "Descubrimiento",
+    duration: "Días 1–3",
     description:
-      "We audit your current operations, tools, and bottlenecks. You leave with a clear map of what's costing you time and a prioritized automation roadmap — even if you don't hire us.",
+      "Auditamos tus operaciones, herramientas y cuellos de botella actuales. Te vas con un mapa claro de qué te está costando tiempo y una hoja de ruta priorizada — incluso si no trabajás con nosotros.",
   },
   {
     step: "02",
-    title: "Architecture",
-    duration: "Days 4–7",
+    title: "Arquitectura",
+    duration: "Días 4–7",
     description:
-      "We design the technical system: integrations, data flow, AI logic, and fallback handling. You approve the blueprint before a single line of code is written.",
+      "Diseñamos el sistema técnico: integraciones, flujo de datos, lógica de IA y manejo de excepciones. Vos aprobás el plano antes de que se escriba una sola línea de código.",
   },
   {
     step: "03",
-    title: "Build",
-    duration: "Week 2–4",
+    title: "Construcción",
+    duration: "Semana 2–4",
     description:
-      "Our team builds in focused sprints with weekly demos, so you see progress continuously instead of waiting weeks for a reveal.",
+      "Nuestro equipo construye en sprints enfocados con demos semanales, así ves el avance de forma continua en vez de esperar semanas para una gran revelación.",
   },
   {
     step: "04",
-    title: "Test & Launch",
-    duration: "Week 4–5",
+    title: "Pruebas y lanzamiento",
+    duration: "Semana 4–5",
     description:
-      "We stress-test every workflow against edge cases, train your team on the system, and launch with monitoring in place from day one.",
+      "Sometemos cada flujo a pruebas de estrés contra casos límite, capacitamos a tu equipo en el sistema, y lanzamos con monitoreo activo desde el primer día.",
   },
   {
     step: "05",
-    title: "Optimize",
-    duration: "Ongoing",
+    title: "Optimización",
+    duration: "Continuo",
     description:
-      "Post-launch, we monitor performance and refine based on real usage data. Most systems get measurably better in the first 60 days.",
+      "Después del lanzamiento, monitoreamos el rendimiento y ajustamos según el uso real. La mayoría de los sistemas mejoran de forma medible en los primeros 60 días.",
   },
 ];
 
 export const benefits = [
   {
-    title: "Built for your business, not a template",
+    title: "Construido para tu negocio, no para una plantilla",
     description:
-      "Every workflow is mapped to how you actually operate. We don't sell pre-built bots — we build systems around your real processes.",
+      "Cada flujo se mapea según cómo realmente operás. No vendemos bots pre-armados — construimos sistemas alrededor de tus procesos reales.",
     icon: "Fingerprint",
   },
   {
-    title: "Live in weeks, not quarters",
+    title: "En vivo en semanas, no en trimestres",
     description:
-      "Most engagements ship a working system in 2–6 weeks. You see weekly progress, not a single reveal at the end.",
+      "La mayoría de los proyectos lanzan un sistema funcionando en 2 a 6 semanas. Ves avance semanal, no una sola revelación al final.",
     icon: "Zap",
   },
   {
-    title: "Engineered, not duct-taped",
+    title: "Ingeniería real, no parches",
     description:
-      "Production-grade infrastructure with error monitoring, fallback logic, and documentation — built to survive contact with the real world.",
+      "Infraestructura de nivel productivo con monitoreo de errores, lógica de respaldo y documentación — construida para sobrevivir al mundo real.",
     icon: "ShieldCheck",
   },
   {
-    title: "You own everything",
+    title: "Vos sos dueño de todo",
     description:
-      "No lock-in. Every workflow, integration, and line of code belongs to you, with full documentation handed over at launch.",
+      "Sin ataduras. Cada flujo, integración y línea de código te pertenece, con documentación completa entregada al lanzamiento.",
     icon: "KeyRound",
   },
   {
-    title: "Measured in hours and revenue",
+    title: "Medido en horas e ingresos",
     description:
-      "We track time saved and revenue influenced for every system we build — so ROI is never a guess.",
+      "Hacemos seguimiento del tiempo ahorrado y los ingresos influenciados por cada sistema que construimos — así el retorno de inversión nunca es una suposición.",
     icon: "TrendingUp",
   },
   {
-    title: "A team, not a freelancer",
+    title: "Un equipo, no un freelancer",
     description:
-      "Dedicated project lead, automation engineer, and QA on every build — with a Slack channel open for the full engagement.",
+      "Líder de proyecto, ingeniero de automatización y control de calidad dedicados en cada proyecto — con un canal de Slack abierto durante toda la relación.",
     icon: "Users",
   },
 ];
@@ -387,74 +387,74 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "northbeam-realty",
     client: "Northbeam Realty",
-    industry: "Real Estate",
+    industry: "Bienes raíces",
     summary:
-      "Replaced 4 manual intake processes with a single AI-driven lead routing and follow-up system across 12 agents.",
+      "Reemplazamos 4 procesos manuales de recepción de leads con un solo sistema de enrutamiento y seguimiento con IA para 12 agentes.",
     challenge:
-      "Northbeam's 12 agents were manually qualifying leads from six different sources — website, Zillow, Facebook, referrals, open houses, and cold inquiries. Leads sat unanswered for an average of 14 hours, and agents spent 90 minutes a day on data entry alone.",
+      "Los 12 agentes de Northbeam calificaban leads manualmente desde seis fuentes distintas — sitio web, Zillow, Facebook, referidos, casas abiertas y consultas en frío. Los leads quedaban sin respuesta un promedio de 14 horas, y los agentes dedicaban 90 minutos diarios solo a ingresar datos.",
     solution:
-      "We built a unified intake system that pulls leads from every channel into one pipeline, uses AI to qualify and score them in real time, auto-assigns to the right agent based on territory and availability, and triggers an instant WhatsApp and SMS response — all synced to their CRM with zero manual entry.",
+      "Construimos un sistema de recepción unificado que trae leads de cada canal a un solo pipeline, usa IA para calificarlos y puntuarlos en tiempo real, los asigna automáticamente al agente correcto según territorio y disponibilidad, y dispara una respuesta instantánea por WhatsApp y SMS — todo sincronizado con su CRM sin ingreso manual de datos.",
     results: [
-      { metric: "14hrs → 90sec", label: "Average lead response time" },
-      { metric: "31%", label: "Increase in lead-to-showing conversion" },
-      { metric: "23hrs/wk", label: "Admin time eliminated across the team" },
+      { metric: "14hs → 90seg", label: "Tiempo promedio de respuesta a leads" },
+      { metric: "31%", label: "Aumento en conversión de lead a visita" },
+      { metric: "23hs/sem", label: "Tiempo administrativo eliminado en el equipo" },
     ],
-    services: ["AI Automation", "CRM Integrations", "WhatsApp Automation"],
-    timeline: "5 weeks",
+    services: ["Automatización con IA", "Integraciones con CRM", "Automatización de WhatsApp"],
+    timeline: "5 semanas",
   },
   {
     slug: "lumen-dental-group",
     client: "Lumen Dental Group",
-    industry: "Healthcare",
+    industry: "Salud",
     summary:
-      "Built an AI booking and reminder system across 4 clinics, cutting no-shows by 38% in the first quarter.",
+      "Construimos un sistema de reservas y recordatorios con IA en 4 clínicas, reduciendo las ausencias un 38% en el primer trimestre.",
     challenge:
-      "Lumen's front-desk staff across four locations spent hours each day on phone scheduling and manual reminder calls, yet still saw a 22% no-show rate that was directly costing chair time and revenue.",
+      "El personal de recepción de Lumen en cuatro sucursales pasaba horas diarias agendando por teléfono y haciendo llamadas manuales de recordatorio, y aun así tenían una tasa de ausencia del 22% que costaba directamente tiempo de sillón y facturación.",
     solution:
-      "We deployed a self-serve booking system synced across all four clinic calendars, layered with an AI chatbot that handles rescheduling and FAQs, and an automated SMS/WhatsApp reminder sequence with confirmation requirements built in.",
+      "Desplegamos un sistema de reserva autogestionado sincronizado con los calendarios de las cuatro clínicas, sumado a un chatbot con IA que gestiona reprogramaciones y preguntas frecuentes, y una secuencia automatizada de recordatorios por SMS/WhatsApp con confirmación obligatoria.",
     results: [
-      { metric: "38%", label: "Reduction in no-show rate" },
-      { metric: "4,200+", label: "Bookings handled without staff involvement" },
-      { metric: "$186K", label: "Recovered annual revenue from filled chair time" },
+      { metric: "38%", label: "Reducción en la tasa de ausencias" },
+      { metric: "4.200+", label: "Reservas gestionadas sin intervención del personal" },
+      { metric: "$186K", label: "Ingresos anuales recuperados por sillones ocupados" },
     ],
-    services: ["Appointment Systems", "AI Chatbots", "AI Automation"],
-    timeline: "4 weeks",
+    services: ["Sistemas de citas y turnos", "Chatbots con IA", "Automatización con IA"],
+    timeline: "4 semanas",
   },
   {
     slug: "forge-logistics",
     client: "Forge Logistics",
-    industry: "Logistics & Supply Chain",
+    industry: "Logística y cadena de suministro",
     summary:
-      "Automated dispatch reporting and customer status updates, replacing a 6-person manual reporting process.",
+      "Automatizamos los reportes de despacho y las actualizaciones de estado a clientes, reemplazando un proceso manual de 6 personas.",
     challenge:
-      "Forge's operations team manually compiled daily dispatch reports from five disconnected systems and fielded a constant stream of 'where's my shipment' calls and emails from customers.",
+      "El equipo de operaciones de Forge compilaba manualmente reportes diarios de despacho desde cinco sistemas desconectados y atendía un flujo constante de llamadas y correos de clientes preguntando '¿dónde está mi envío?'",
     solution:
-      "We built a real-time operations dashboard pulling from all five systems automatically, plus an AI-driven customer notification system that proactively sends shipment status updates via SMS and email — cutting inbound status inquiries dramatically.",
+      "Construimos un dashboard operativo en tiempo real que extrae información de los cinco sistemas automáticamente, más un sistema de notificaciones a clientes con IA que envía actualizaciones proactivas del estado del envío por SMS y email — reduciendo drásticamente las consultas entrantes.",
     results: [
-      { metric: "91%", label: "Drop in inbound status-check calls" },
-      { metric: "6 → 1", label: "Headcount needed for daily reporting" },
-      { metric: "$240K/yr", label: "Operational cost savings" },
+      { metric: "91%", label: "Caída en llamadas de consulta de estado" },
+      { metric: "6 → 1", label: "Personal necesario para el reporte diario" },
+      { metric: "$240K/año", label: "Ahorro en costos operativos" },
     ],
-    services: ["Custom Dashboards", "Internal Business Automation", "Workflow Optimization"],
-    timeline: "7 weeks",
+    services: ["Dashboards personalizados", "Automatización interna de negocio", "Optimización de procesos"],
+    timeline: "7 semanas",
   },
   {
     slug: "vantage-fitness",
     client: "Vantage Fitness",
-    industry: "Fitness & Wellness",
+    industry: "Fitness y bienestar",
     summary:
-      "Rebuilt the website and added an AI sales assistant, lifting trial sign-ups by 64% in 90 days.",
+      "Rediseñamos el sitio web y sumamos un asistente de ventas con IA, aumentando las inscripciones a prueba un 64% en 90 días.",
     challenge:
-      "Vantage's outdated website loaded in 6+ seconds on mobile and converted under 1% of visitors. Their sales team also had no system for following up with trial leads, losing the majority within 48 hours.",
+      "El sitio web desactualizado de Vantage cargaba en más de 6 segundos en mobile y convertía menos del 1% de las visitas. Su equipo de ventas tampoco tenía un sistema de seguimiento para leads de prueba, perdiendo a la mayoría en las primeras 48 horas.",
     solution:
-      "We rebuilt the site on Next.js with conversion-focused design and copy, added an AI chat assistant that answers membership questions and books tours instantly, and layered an automated 7-day follow-up sequence for every trial sign-up.",
+      "Rediseñamos el sitio en Next.js con diseño y copy orientados a conversión, sumamos un asistente de chat con IA que responde preguntas sobre membresías y agenda visitas al instante, y montamos una secuencia automatizada de seguimiento de 7 días para cada inscripción de prueba.",
     results: [
-      { metric: "64%", label: "Increase in trial sign-ups" },
-      { metric: "1.2s", label: "New average mobile load time" },
-      { metric: "2.4x", label: "Trial-to-membership conversion rate" },
+      { metric: "64%", label: "Aumento en inscripciones de prueba" },
+      { metric: "1.2s", label: "Nuevo tiempo de carga promedio en mobile" },
+      { metric: "2.4x", label: "Tasa de conversión de prueba a membresía" },
     ],
-    services: ["High-Converting Websites", "AI Chatbots", "AI Automation"],
-    timeline: "6 weeks",
+    services: ["Sitios web de alta conversión", "Chatbots con IA", "Automatización con IA"],
+    timeline: "6 semanas",
   },
 ];
 
@@ -468,44 +468,44 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Volta didn't just automate our lead intake — they rebuilt how our whole sales process works. We went from 14-hour response times to under two minutes, and our agents finally have time to actually sell.",
+      "Volta no solo automatizó nuestra recepción de leads — rediseñó cómo funciona todo nuestro proceso de ventas. Pasamos de 14 horas de respuesta a menos de dos minutos, y nuestros agentes finalmente tienen tiempo para vender.",
     name: "Daniela Cruz",
-    role: "Managing Broker",
+    role: "Broker principal",
     company: "Northbeam Realty",
   },
   {
     quote:
-      "I was skeptical an AI chatbot could actually sound like us. Within a week of launch, patients couldn't tell the difference, and our no-show rate dropped almost 40%. This paid for itself in the first month.",
+      "Era escéptica de que un chatbot con IA pudiera sonar como nosotros. A la semana del lanzamiento, los pacientes no notaban la diferencia, y nuestra tasa de ausencias bajó casi un 40%. Se pagó solo en el primer mes.",
     name: "Dr. Marcus Webb",
-    role: "Practice Director",
+    role: "Director de práctica",
     company: "Lumen Dental Group",
   },
   {
     quote:
-      "We'd tried two other agencies before Volta. The difference is they actually mapped our operations before building anything. Nothing felt off-the-shelf — every workflow matched exactly how we run dispatch.",
+      "Ya habíamos probado con dos agencias antes de Volta. La diferencia es que ellos realmente mapearon nuestras operaciones antes de construir nada. Nada se sintió genérico — cada flujo coincidía exactamente con cómo manejamos el despacho.",
     name: "Priya Anand",
-    role: "VP of Operations",
+    role: "VP de Operaciones",
     company: "Forge Logistics",
   },
   {
     quote:
-      "Our old site looked fine and converted nothing. The new one looks like a company twice our size, loads instantly, and the AI assistant alone has booked more tours than two of our front-desk staff combined.",
+      "Nuestro sitio anterior se veía bien y no convertía nada. El nuevo parece de una empresa el doble de grande, carga al instante, y el asistente de IA solo ya agendó más visitas que dos de nuestros empleados de recepción juntos.",
     name: "Jordan Lee",
-    role: "Founder & CEO",
+    role: "Fundador y CEO",
     company: "Vantage Fitness",
   },
   {
     quote:
-      "What impressed me most was the handoff. Full documentation, recorded training sessions, and a team that actually answers when something needs adjusting. We own the system outright — no dependency on the agency.",
+      "Lo que más me impresionó fue el traspaso final. Documentación completa, sesiones de capacitación grabadas, y un equipo que realmente responde cuando algo necesita un ajuste. Somos dueños del sistema por completo — sin depender de la agencia.",
     name: "Helena Ruiz",
     role: "COO",
     company: "Atlas Legal Partners",
   },
   {
     quote:
-      "We've worked with three dev shops in five years. Volta is the first one that talked about ROI and hours saved instead of just features. The dashboard alone replaced a part-time analyst role.",
+      "Trabajamos con tres estudios de desarrollo en cinco años. Volta es el primero que habla de retorno de inversión y horas ahorradas en vez de solo funcionalidades. El dashboard solo ya reemplazó un puesto de analista part-time.",
     name: "Tom Okafor",
-    role: "Director of Strategy",
+    role: "Director de Estrategia",
     company: "Coral Bay Capital",
   },
 ];
@@ -526,116 +526,116 @@ export type PricingTier = {
 export const pricingTiers: PricingTier[] = [
   {
     name: "Starter",
-    price: "$2,900",
-    cadence: "one-time",
+    price: "$2.900",
+    cadence: "pago único",
     description:
-      "A focused automation or website build that solves one clear bottleneck, fast.",
-    timeline: "2–3 weeks",
-    bestFor: "Small teams automating a single process or launching a new site",
+      "Un proyecto de automatización o sitio web enfocado que resuelve un cuello de botella claro, rápido.",
+    timeline: "2–3 semanas",
+    bestFor: "Equipos chicos que automatizan un proceso o lanzan un sitio nuevo",
     features: [
-      "1 core automation workflow or a custom 5-page website",
-      "Up to 2 tool integrations",
-      "Basic AI chatbot (FAQ + lead capture)",
-      "1 round of revisions",
-      "30-day post-launch support",
-      "Loom-recorded training handoff",
+      "1 flujo de automatización principal o un sitio a medida de 5 páginas",
+      "Hasta 2 integraciones de herramientas",
+      "Chatbot con IA básico (preguntas frecuentes + captura de leads)",
+      "1 ronda de revisiones",
+      "30 días de soporte post-lanzamiento",
+      "Capacitación grabada en video para el traspaso",
     ],
     deliverables: [
-      "Working automation or live website",
-      "Documentation of all workflows",
-      "Login access and ownership of all accounts",
+      "Automatización funcionando o sitio web en vivo",
+      "Documentación de todos los flujos",
+      "Acceso y titularidad de todas las cuentas",
     ],
-    cta: "Start with Starter",
+    cta: "Empezar con Starter",
   },
   {
     name: "Professional",
-    price: "$7,500",
-    cadence: "one-time",
+    price: "$7.500",
+    cadence: "pago único",
     description:
-      "A complete automation system across multiple workflows, with a custom AI chatbot and CRM sync.",
-    timeline: "4–6 weeks",
-    bestFor: "Growing companies ready to automate across their full operation",
+      "Un sistema de automatización completo con múltiples flujos, chatbot con IA a medida y sincronización con el CRM.",
+    timeline: "4–6 semanas",
+    bestFor: "Empresas en crecimiento listas para automatizar toda su operación",
     features: [
-      "Up to 4 automation workflows",
-      "Custom AI chatbot trained on your business",
-      "Full CRM integration and two-way sync",
-      "WhatsApp or SMS automation included",
-      "Custom website or landing page (up to 10 pages)",
-      "Up to 3 rounds of revisions",
-      "90-day post-launch support",
-      "Live training session for your team",
+      "Hasta 4 flujos de automatización",
+      "Chatbot con IA personalizado entrenado en tu negocio",
+      "Integración completa y sincronización bidireccional con el CRM",
+      "Automatización de WhatsApp o SMS incluida",
+      "Sitio web o landing page a medida (hasta 10 páginas)",
+      "Hasta 3 rondas de revisiones",
+      "90 días de soporte post-lanzamiento",
+      "Sesión de capacitación en vivo para tu equipo",
     ],
     deliverables: [
-      "Full automation suite with monitoring",
-      "Custom-trained AI chatbot, deployed",
-      "Integrated CRM and reporting setup",
-      "Complete documentation and SOPs",
+      "Suite completa de automatización con monitoreo",
+      "Chatbot con IA entrenado a medida, desplegado",
+      "Configuración de CRM integrado y reportes",
+      "Documentación completa y procedimientos",
     ],
-    cta: "Go Professional",
+    cta: "Ir con Professional",
     highlighted: true,
   },
   {
     name: "Enterprise",
-    price: "Custom",
-    cadence: "from $18,000",
+    price: "A medida",
+    cadence: "desde $18.000",
     description:
-      "End-to-end transformation: workflow audit, full automation buildout, custom dashboards, and a dedicated team.",
-    timeline: "8–12+ weeks",
-    bestFor: "Multi-location or high-volume operations with complex systems",
+      "Transformación integral: auditoría de procesos, automatización completa, dashboards personalizados y un equipo dedicado.",
+    timeline: "8–12+ semanas",
+    bestFor: "Operaciones multi-sucursal o de alto volumen con sistemas complejos",
     features: [
-      "Full operations audit and automation roadmap",
-      "Unlimited workflow automations",
-      "Multi-channel AI support (web, WhatsApp, SMS, IG)",
-      "Custom internal dashboards and reporting",
-      "Dedicated project lead and engineering team",
-      "Priority SLA support",
-      "Quarterly optimization reviews",
-      "12-month support and iteration plan",
+      "Auditoría completa de operaciones y hoja de ruta de automatización",
+      "Automatizaciones de flujos ilimitadas",
+      "Soporte con IA multicanal (web, WhatsApp, SMS, Instagram)",
+      "Dashboards internos y reportes personalizados",
+      "Líder de proyecto y equipo de ingeniería dedicados",
+      "Soporte prioritario con SLA",
+      "Revisiones de optimización trimestrales",
+      "Plan de soporte e iteración de 12 meses",
     ],
     deliverables: [
-      "Complete automated operations infrastructure",
-      "Custom dashboard suite",
-      "Full team training and change management support",
-      "Ongoing optimization roadmap",
+      "Infraestructura de operaciones completamente automatizada",
+      "Suite de dashboards personalizados",
+      "Capacitación completa del equipo y apoyo en gestión del cambio",
+      "Hoja de ruta de optimización continua",
     ],
-    cta: "Talk to Sales",
+    cta: "Hablar con ventas",
   },
 ];
 
 export const maintenancePlans = [
   {
     name: "Care",
-    price: "$390/mo",
-    description: "Monitoring, minor adjustments, and uptime assurance for existing systems.",
+    price: "$390/mes",
+    description: "Monitoreo, ajustes menores y garantía de disponibilidad para sistemas existentes.",
     features: [
-      "24/7 automated monitoring & alerting",
-      "Up to 2 hours of adjustments per month",
-      "Monthly performance report",
-      "Priority email support (24hr response)",
+      "Monitoreo y alertas automatizadas 24/7",
+      "Hasta 2 horas de ajustes por mes",
+      "Reporte mensual de rendimiento",
+      "Soporte prioritario por email (respuesta en 24hs)",
     ],
   },
   {
     name: "Growth",
-    price: "$890/mo",
-    description: "Active optimization and new workflow additions on a rolling basis.",
+    price: "$890/mes",
+    description: "Optimización activa y nuevos flujos agregados de forma continua.",
     features: [
-      "Everything in Care",
-      "Up to 6 hours of build time per month",
-      "Quarterly automation audit",
-      "Priority Slack support (same-day response)",
-      "1 new workflow or integration per quarter",
+      "Todo lo de Care",
+      "Hasta 6 horas de desarrollo por mes",
+      "Auditoría de automatización trimestral",
+      "Soporte prioritario por Slack (respuesta el mismo día)",
+      "1 nuevo flujo o integración por trimestre",
     ],
   },
   {
     name: "Scale",
-    price: "$1,950/mo",
-    description: "A fractional automation team embedded in your operations.",
+    price: "$1.950/mes",
+    description: "Un equipo de automatización fraccional integrado a tus operaciones.",
     features: [
-      "Everything in Growth",
-      "Up to 16 hours of build time per month",
-      "Monthly strategy call with your project lead",
-      "Same-day priority support",
-      "Dedicated Slack channel with your engineering team",
+      "Todo lo de Growth",
+      "Hasta 16 horas de desarrollo por mes",
+      "Llamada mensual de estrategia con tu líder de proyecto",
+      "Soporte prioritario el mismo día",
+      "Canal de Slack dedicado con tu equipo de ingeniería",
     ],
   },
 ];
@@ -644,82 +644,82 @@ export type FAQItem = { question: string; answer: string };
 
 export const faqs: FAQItem[] = [
   {
-    question: "How long does a typical project take?",
+    question: "¿Cuánto tiempo lleva un proyecto típico?",
     answer:
-      "Most Starter projects launch in 2–3 weeks. Professional-tier builds take 4–6 weeks. Enterprise engagements with multiple systems typically run 8–12 weeks, depending on scope. You'll get a precise timeline after the discovery call, and we run weekly demos so you always know exactly where the build stands.",
+      "La mayoría de los proyectos Starter se lanzan en 2 a 3 semanas. Los proyectos Professional toman 4 a 6 semanas. Los proyectos Enterprise con múltiples sistemas suelen durar 8 a 12 semanas, según el alcance. Vas a recibir un cronograma preciso después de la llamada de descubrimiento, y hacemos demos semanales para que siempre sepas exactamente en qué etapa está el proyecto.",
   },
   {
-    question: "Do I need any technical knowledge to work with you?",
+    question: "¿Necesito conocimientos técnicos para trabajar con ustedes?",
     answer:
-      "No. We handle the entire technical build, and every system is handed off with documentation and a recorded training session in plain language. You'll know exactly how to use, adjust, and monitor what we build — without needing to touch code.",
+      "No. Nosotros nos encargamos de todo el desarrollo técnico, y cada sistema se entrega con documentación y una sesión de capacitación grabada en lenguaje simple. Vas a saber exactamente cómo usar, ajustar y monitorear lo que construimos — sin necesidad de tocar código.",
   },
   {
-    question: "What tools and platforms do you work with?",
+    question: "¿Con qué herramientas y plataformas trabajan?",
     answer:
-      "We're platform-agnostic and build around whatever you already use — HubSpot, Salesforce, GoHighLevel, Airtable, n8n, Make, Zapier, Twilio, the WhatsApp Business API, and most major CRMs and calendar systems. If you don't have a preference, we'll recommend the right tool for your scale and budget.",
+      "Somos agnósticos de plataforma y construimos alrededor de lo que ya usás — HubSpot, Salesforce, GoHighLevel, Airtable, n8n, Make, Zapier, Twilio, la API de WhatsApp Business, y la mayoría de los CRMs y sistemas de calendario más usados. Si no tenés una preferencia, te recomendamos la herramienta correcta según tu escala y presupuesto.",
   },
   {
-    question: "Who owns the systems and code after the project is done?",
+    question: "¿Quién es dueño de los sistemas y el código después del proyecto?",
     answer:
-      "You do — entirely. Every account, workflow, and line of code is transferred to your ownership at launch. There's no lock-in and no dependency on us to keep running. Most clients choose to stay on a maintenance plan anyway, but it's never required.",
+      "Vos, por completo. Cada cuenta, flujo y línea de código se transfiere a tu titularidad al momento del lanzamiento. No hay ataduras ni dependencia de nosotros para que siga funcionando. La mayoría de los clientes elige quedarse con un plan de mantenimiento de todas formas, pero nunca es obligatorio.",
   },
   {
-    question: "What happens if something breaks after launch?",
+    question: "¿Qué pasa si algo se rompe después del lanzamiento?",
     answer:
-      "Every project includes a post-launch support window (30–90 days depending on tier) where fixes are covered at no extra cost. After that, our monthly maintenance plans cover monitoring, adjustments, and priority support — or you're welcome to maintain it in-house using the documentation we provide.",
+      "Cada proyecto incluye una ventana de soporte post-lanzamiento (30 a 90 días según el plan) donde las correcciones están cubiertas sin costo adicional. Después de eso, nuestros planes de mantenimiento mensual cubren monitoreo, ajustes y soporte prioritario — o podés mantenerlo internamente usando la documentación que te entregamos.",
   },
   {
-    question: "Can you work with our existing website or do we need a new one?",
+    question: "¿Pueden trabajar con nuestro sitio web actual o necesitamos uno nuevo?",
     answer:
-      "Both are options. Many of our automation and chatbot projects integrate directly into an existing site with no rebuild needed. If your current site is hurting conversion or performance, we'll flag it during discovery and give you a clear recommendation — never a forced upsell.",
+      "Ambas opciones son posibles. Muchos de nuestros proyectos de automatización y chatbots se integran directamente en un sitio existente sin necesidad de rediseñarlo. Si tu sitio actual está perjudicando la conversión o el rendimiento, te lo vamos a marcar durante el descubrimiento y te vamos a dar una recomendación clara — nunca una venta forzada.",
   },
   {
-    question: "How is pricing determined for Enterprise projects?",
+    question: "¿Cómo se determina el precio de los proyectos Enterprise?",
     answer:
-      "Enterprise pricing depends on the number of systems, integrations, and team training required. After a discovery audit, you'll receive a fixed-scope proposal with transparent line-item pricing — never hourly billing with an open-ended total.",
+      "El precio de Enterprise depende de la cantidad de sistemas, integraciones y capacitación de equipo requeridos. Después de una auditoría de descubrimiento, vas a recibir una propuesta de alcance fijo con precios transparentes por ítem — nunca facturación por hora con un total abierto.",
   },
   {
-    question: "Do you sign contracts and NDAs?",
+    question: "¿Firman contratos y acuerdos de confidencialidad?",
     answer:
-      "Yes. Every engagement starts with a signed service agreement outlining scope, timeline, and deliverables, and we sign NDAs as standard practice before any discovery call that involves sensitive business information.",
+      "Sí. Cada proyecto empieza con un contrato de servicio firmado que detalla alcance, cronograma y entregables, y firmamos acuerdos de confidencialidad como práctica estándar antes de cualquier llamada de descubrimiento que involucre información sensible del negocio.",
   },
 ];
 
 export const blogPosts = [
   {
     slug: "real-cost-of-manual-operations",
-    title: "The Real Cost of Manual Operations (And How to Calculate Yours)",
+    title: "El costo real de las operaciones manuales (y cómo calcular el tuyo)",
     excerpt:
-      "Most leadership teams underestimate how much manual work costs them by 3–5x. Here's the framework we use with clients to find the real number.",
+      "La mayoría de los equipos directivos subestima cuánto les cuesta el trabajo manual entre 3 y 5 veces. Este es el marco que usamos con clientes para encontrar el número real.",
     date: "2026-05-12",
-    readTime: "7 min read",
-    category: "Operations",
+    readTime: "7 min de lectura",
+    category: "Operaciones",
   },
   {
     slug: "ai-chatbot-vs-live-chat",
-    title: "AI Chatbot vs. Live Chat: What Actually Converts Better in 2026",
+    title: "Chatbot con IA vs. chat en vivo: qué convierte mejor en 2026",
     excerpt:
-      "We analyzed conversion data across 40+ client deployments to settle the debate. The answer depends on one factor most companies ignore.",
+      "Analizamos datos de conversión de más de 40 implementaciones con clientes para resolver el debate. La respuesta depende de un factor que la mayoría de las empresas ignora.",
     date: "2026-04-28",
-    readTime: "6 min read",
-    category: "AI Chatbots",
+    readTime: "6 min de lectura",
+    category: "Chatbots con IA",
   },
   {
     slug: "choosing-automation-platform",
-    title: "n8n vs. Make vs. Zapier: Choosing the Right Automation Platform",
+    title: "n8n vs. Make vs. Zapier: cómo elegir la plataforma de automatización correcta",
     excerpt:
-      "Each platform has a sweet spot. We break down when each one wins, with real pricing and scale comparisons from client builds.",
+      "Cada plataforma tiene su punto fuerte. Desglosamos cuándo gana cada una, con comparaciones reales de precio y escala de proyectos con clientes.",
     date: "2026-04-09",
-    readTime: "9 min read",
-    category: "Automation",
+    readTime: "9 min de lectura",
+    category: "Automatización",
   },
   {
     slug: "whatsapp-business-api-guide",
-    title: "A Practical Guide to the WhatsApp Business API for Service Businesses",
+    title: "Guía práctica de la API de WhatsApp Business para empresas de servicios",
     excerpt:
-      "Open rates above 90% are real, but the API has rules that catch most businesses off guard. Here's what to know before you start.",
+      "Las tasas de apertura por encima del 90% son reales, pero la API tiene reglas que sorprenden a la mayoría de las empresas. Esto es lo que hay que saber antes de empezar.",
     date: "2026-03-22",
-    readTime: "8 min read",
-    category: "WhatsApp Automation",
+    readTime: "8 min de lectura",
+    category: "Automatización de WhatsApp",
   },
 ];

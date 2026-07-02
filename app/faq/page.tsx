@@ -7,8 +7,8 @@ import { faqSchema } from "@/lib/structured-data";
 import { faqs } from "@/lib/data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "FAQ",
-  description: "Answers to the most common questions about working with Volta.",
+  title: "Preguntas frecuentes",
+  description: "Respuestas a las preguntas más comunes sobre trabajar con Volta.",
   path: "/faq",
 });
 
@@ -21,9 +21,9 @@ export default function FAQPage() {
       />
       <section className="pt-20 pb-6 sm:pt-28">
         <Container className="max-w-3xl">
-          <p className="eyebrow mb-4">FAQ</p>
+          <p className="eyebrow mb-4">Preguntas frecuentes</p>
           <h1 className="text-4xl font-medium leading-tight tracking-tight text-bone sm:text-5xl">
-            Frequently asked questions.
+            Preguntas frecuentes.
           </h1>
         </Container>
       </section>

@@ -13,9 +13,9 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const study = caseStudies.find((c) => c.slug === params.slug);
-  if (!study) return buildMetadata({ title: "Case Study", description: "", path: "/case-studies" });
+  if (!study) return buildMetadata({ title: "Caso de éxito", description: "", path: "/case-studies" });
   return buildMetadata({
-    title: `${study.client} — Case Study`,
+    title: `${study.client} — Caso de éxito`,
     description: study.summary,
     path: `/case-studies/${study.slug}`,
   });
@@ -31,7 +31,7 @@ export default function CaseStudyDetail({ params }: { params: { slug: string } }
         <Container className="max-w-3xl">
           <Link href="/case-studies" className="btn-ghost">
             <ArrowLeft className="h-4 w-4" />
-            All case studies
+            Todos los casos de éxito
           </Link>
 
           <p className="eyebrow mb-4 mt-8">
@@ -68,11 +68,11 @@ export default function CaseStudyDetail({ params }: { params: { slug: string } }
 
           <div className="mt-14 space-y-10">
             <div>
-              <p className="eyebrow mb-3">The challenge</p>
+              <p className="eyebrow mb-3">El desafío</p>
               <p className="text-base leading-relaxed text-bone-muted">{study.challenge}</p>
             </div>
             <div>
-              <p className="eyebrow mb-3">What we built</p>
+              <p className="eyebrow mb-3">Qué construimos</p>
               <p className="text-base leading-relaxed text-bone-muted">{study.solution}</p>
             </div>
           </div>

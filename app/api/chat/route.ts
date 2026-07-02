@@ -1,29 +1,29 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Lightweight rule-based fallback so the widget works out of the box with
-// zero configuration. To power this with a real model, drop your provider
-// call in here (Anthropic / OpenAI) using the ANTHROPIC_API_KEY or
-// OPENAI_API_KEY env var, and pass `messages` straight through.
+// Respuesta simple basada en reglas para que el widget funcione sin configuración.
+// Para conectarlo a un modelo real, reemplazá el bloque de reglas por una llamada
+// a la API de Anthropic u OpenAI usando `messages` como historial de conversación,
+// y devolvé { reply: <respuesta del modelo> }.
 
 const RULES: { keywords: string[]; reply: string }[] = [
   {
-    keywords: ["price", "pricing", "cost", "how much"],
+    keywords: ["precio", "cuesta", "cuánto", "cuanto", "costo"],
     reply:
-      "Our plans start at $2,900 for a focused Starter build, $7,500 for our most popular Professional package, and custom Enterprise pricing from $18,000. Want the full breakdown? Check out /pricing or I can have someone walk you through it on a call.",
+      "Nuestros planes arrancan en $2.900 para un proyecto Starter enfocado, $7.500 para nuestro paquete Professional (el más elegido), y precio a medida para Enterprise desde $18.000. ¿Querés el detalle completo? Mirá /pricing o puedo pedir que alguien te lo explique en una llamada.",
   },
   {
-    keywords: ["timeline", "how long", "weeks"],
+    keywords: ["cuánto tarda", "cuanto tarda", "tiempo", "semanas", "plazo"],
     reply:
-      "Most Starter projects launch in 2–3 weeks, Professional builds take 4–6 weeks, and Enterprise engagements run 8–12+ weeks depending on scope. You'll get an exact timeline after a quick discovery call.",
+      "La mayoría de los proyectos Starter se lanzan en 2–3 semanas, los proyectos Professional toman 4–6 semanas, y los proyectos Enterprise llevan 8–12+ semanas según el alcance. Vas a recibir un cronograma exacto después de una breve llamada de descubrimiento.",
   },
   {
     keywords: ["chatbot", "bot"],
     reply:
-      "We build custom AI chatbots trained on your business — deployed on your website, WhatsApp, or Instagram, with human hand-off built in. Want to see how it'd work for your business specifically?",
+      "Construimos chatbots con IA personalizados entrenados en tu negocio — desplegados en tu sitio web, WhatsApp o Instagram, con traspaso a un humano incluido. ¿Querés ver cómo funcionaría específicamente para tu negocio?",
   },
   {
-    keywords: ["call", "book", "meeting", "demo"],
-    reply: "You can grab a time directly here: /book-a-call — no back-and-forth needed.",
+    keywords: ["llamada", "reservar", "reunión", "reunion", "demo", "agendar"],
+    reply: "Podés reservar un horario directamente aquí: /book-a-call — sin ida y vuelta necesario.",
   },
 ];
 
@@ -39,15 +39,15 @@ export async function POST(req: NextRequest) {
 
     const reply =
       match?.reply ||
-      "Good question — that's exactly what we cover on a discovery call. Want me to point you to our calendar, or would you rather send a quick message to the team?";
+      "Buena pregunta — eso es exactamente lo que cubrimos en una llamada de descubrimiento. ¿Querés que te lleve a nuestro calendario, o prefieres enviarle un mensaje directo al equipo?";
 
-    // Simulate a brief thinking delay for a natural feel
+    // Simula una breve demora de "pensamiento" para que se sienta más natural
     await new Promise((r) => setTimeout(r, 500));
 
     return NextResponse.json({ reply });
   } catch (error) {
     return NextResponse.json(
-      { reply: "Something went wrong on my end — try the contact form instead." },
+      { reply: "Algo salió mal de nuestro lado — probá con el formulario de contacto." },
       { status: 500 }
     );
   }

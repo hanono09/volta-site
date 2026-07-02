@@ -9,7 +9,7 @@ type Message = { role: "user" | "assistant"; content: string };
 const STARTER: Message = {
   role: "assistant",
   content:
-    "Hi, I'm the Volta assistant. Ask me about pricing, timelines, or what we'd recommend for your business — I'll point you in the right direction.",
+    "Hola, soy el asistente de Volta. Preguntame sobre precios, tiempos, o qué te recomendaríamos para tu negocio — te voy a orientar.",
 };
 
 export function ChatWidget() {
@@ -44,7 +44,7 @@ export function ChatWidget() {
         {
           role: "assistant",
           content:
-            "I'm having trouble connecting right now. For a faster answer, book a call or message us on WhatsApp — links are in the menu.",
+            "Estoy teniendo problemas para conectarme ahora. Para una respuesta más rápida, reservá una llamada o escribinos por WhatsApp — los links están en el menú.",
         },
       ]);
     } finally {
@@ -56,7 +56,7 @@ export function ChatWidget() {
     <>
       <motion.button
         onClick={() => setOpen(!open)}
-        aria-label={open ? "Close chat" : "Open chat"}
+        aria-label={open ? "Cerrar chat" : "Abrir chat"}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.4, ease: "easeOut" }}
@@ -76,14 +76,14 @@ export function ChatWidget() {
             transition={{ duration: 0.2, ease: "easeOut" }}
             className="fixed bottom-24 right-6 z-40 flex h-[28rem] w-[22rem] max-w-[calc(100vw-3rem)] flex-col overflow-hidden rounded-2xl border border-ink-600 bg-ink-800 shadow-2xl shadow-black/50"
             role="dialog"
-            aria-label="AI chat assistant"
+            aria-label="Asistente de chat con IA"
           >
             <div className="flex items-center gap-2 border-b border-ink-600 bg-ink-700/60 px-4 py-3">
               <Sparkles className="h-4 w-4 text-volt-400" />
-              <p className="text-sm font-medium text-bone">Volta Assistant</p>
+              <p className="text-sm font-medium text-bone">Asistente de Volta</p>
               <span className="ml-auto flex items-center gap-1.5 text-[11px] text-bone-dim">
                 <span className="h-1.5 w-1.5 rounded-full bg-mint animate-pulse-soft" />
-                Online
+                En línea
               </span>
             </div>
 
@@ -102,7 +102,7 @@ export function ChatWidget() {
               ))}
               {loading && (
                 <div className="w-fit rounded-xl bg-ink-700 px-3 py-2 text-sm text-bone-muted">
-                  Typing…
+                  Escribiendo…
                 </div>
               )}
             </div>
@@ -117,12 +117,12 @@ export function ChatWidget() {
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Ask about pricing, timelines…"
+                placeholder="Preguntá sobre precios, tiempos…"
                 className="flex-1 rounded-full border border-ink-600 bg-ink-900 px-4 py-2 text-sm text-bone placeholder:text-bone-dim focus:border-volt-400"
               />
               <button
                 type="submit"
-                aria-label="Send message"
+                aria-label="Enviar mensaje"
                 disabled={loading}
                 className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-volt-500 text-white disabled:opacity-50"
               >

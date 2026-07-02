@@ -11,14 +11,14 @@ import { organizationSchema, professionalServiceSchema } from "@/lib/structured-
 import { brand } from "@/lib/data";
 
 export const metadata: Metadata = buildMetadata({
-  title: `${brand.name} — AI Automation Agency`,
+  title: `${brand.name} — Agencia de Automatización con IA`,
   description: brand.description,
   path: "/",
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="es" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="font-sans">
         <script
           type="application/ld+json"
@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-volt-500 focus:px-4 focus:py-2 focus:text-white"
         >
-          Skip to content
+          Saltar al contenido
         </a>
         <Navbar />
         <main id="main-content">{children}</main>

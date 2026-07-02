@@ -13,12 +13,12 @@ export function Portfolio() {
       <Container>
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
-            eyebrow="Client results"
-            title="Real systems. Real numbers."
-            description="A sample of what's shipped — every figure pulled from client reporting, not vanity metrics."
+            eyebrow="Resultados de clientes"
+            title="Sistemas reales. Números reales."
+            description="Una muestra de lo que ya entregamos — cada cifra sale de reportes de clientes reales, no de métricas de vanidad."
           />
           <Link href="/case-studies" className="btn-ghost shrink-0">
-            View all case studies
+            Ver todos los casos de éxito
             <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>

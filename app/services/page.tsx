@@ -8,9 +8,9 @@ import { buildMetadata } from "@/lib/seo";
 import { services } from "@/lib/data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Services",
+  title: "Servicios",
   description:
-    "AI automation, chatbots, websites, CRM integrations, WhatsApp automation, appointment systems, AI support, internal automation, workflow optimization, and custom dashboards.",
+    "Automatización con IA, chatbots, sitios web, integraciones con CRM, automatización de WhatsApp, sistemas de citas, soporte con IA, automatización interna, optimización de procesos y dashboards personalizados.",
   path: "/services",
 });
 
@@ -19,15 +19,15 @@ export default function ServicesPage() {
     <>
       <section className="pt-20 pb-10 sm:pt-28">
         <Container className="max-w-3xl">
-          <p className="eyebrow mb-4">Services</p>
+          <p className="eyebrow mb-4">Servicios</p>
           <h1 className="text-4xl font-medium leading-tight tracking-tight text-bone sm:text-5xl">
-            Everything you need to run leaner — built, integrated, and owned by you.
+            Todo lo que necesitás para operar más liviano — construido, integrado y de tu propiedad.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-bone-muted">
-            We rarely sell these in isolation. Most engagements combine two
-            or three of the following into one system. Below is the full
-            menu — explore what's relevant to where your operation is
-            losing time today.
+            Rara vez vendemos esto por separado. La mayoría de los proyectos
+            combinan dos o tres de los siguientes en un solo sistema. Abajo
+            está el menú completo — explorá lo que sea relevante para dónde
+            tu operación está perdiendo tiempo hoy.
           </p>
         </Container>
       </section>
@@ -75,7 +75,7 @@ export default function ServicesPage() {
                       </p>
 
                       <div className="mt-6 space-y-2">
-                        <p className="eyebrow">Typical outcomes</p>
+                        <p className="eyebrow">Resultados típicos</p>
                         <ul className="space-y-1.5">
                           {s.outcomes.map((o) => (
                             <li key={o} className="text-sm text-bone-muted">
@@ -86,13 +86,13 @@ export default function ServicesPage() {
                       </div>
 
                       <Link href="/book-a-call" className="btn-secondary mt-6">
-                        Discuss this for your business
+                        Hablar sobre esto para tu negocio
                         <ArrowUpRight className="h-4 w-4" />
                       </Link>
                     </div>
 
                     <div className="card-surface p-7">
-                      <p className="eyebrow mb-4">What's included</p>
+                      <p className="eyebrow mb-4">Qué incluye</p>
                       <ul className="space-y-3">
                         {s.bullets.map((b) => (
                           <li key={b} className="flex items-start gap-2.5 text-sm text-bone-muted">

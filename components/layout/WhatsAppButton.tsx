@@ -6,7 +6,7 @@ import { MessageCircle } from "lucide-react";
 export function WhatsAppButton() {
   const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "15551234567";
   const message = encodeURIComponent(
-    "Hi! I'd like to learn more about Volta's AI automation services."
+    "¡Hola! Me gustaría saber más sobre los servicios de automatización con IA de Volta."
   );
 
   return (
@@ -14,7 +14,7 @@ export function WhatsAppButton() {
       href={`https://wa.me/${number}?text=${message}`}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat with us on WhatsApp"
+      aria-label="Chatear con nosotros por WhatsApp"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 1, duration: 0.4, ease: "easeOut" }}

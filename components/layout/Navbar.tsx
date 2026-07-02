@@ -42,10 +42,10 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           <Link href="/contact" className="btn-ghost">
-            Contact
+            Contacto
           </Link>
           <Link href="/book-a-call" className="btn-primary">
-            Book a call
+            Reservar llamada
             <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>
@@ -53,7 +53,7 @@ export function Navbar() {
         <button
           className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-600 text-bone md:hidden"
           onClick={() => setOpen(!open)}
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={open}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -85,14 +85,14 @@ export function Navbar() {
                 onClick={() => setOpen(false)}
                 className="rounded-lg px-3 py-3 text-sm text-bone-muted hover:bg-ink-800 hover:text-bone"
               >
-                Contact
+                Contacto
               </Link>
               <Link
                 href="/book-a-call"
                 onClick={() => setOpen(false)}
                 className="btn-primary mt-2"
               >
-                Book a call
+                Reservar llamada
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
             </Container>

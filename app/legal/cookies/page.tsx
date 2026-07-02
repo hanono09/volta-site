@@ -4,26 +4,26 @@ import { buildMetadata } from "@/lib/seo";
 import { brand } from "@/lib/data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Cookie Policy",
-  description: `How ${brand.name} uses cookies on ${brand.domain}.`,
+  title: "Política de Cookies",
+  description: `Cómo usa ${brand.name} las cookies en ${brand.domain}.`,
   path: "/legal/cookies",
 });
 
 const cookieTable = [
   {
-    category: "Essential",
-    purpose: "Required for core Site functionality (navigation, form submission, security).",
+    category: "Esenciales",
+    purpose: "Necesarias para el funcionamiento principal del Sitio (navegación, envío de formularios, seguridad).",
     canDisable: "No",
   },
   {
-    category: "Analytics",
-    purpose: "Helps us understand how visitors use the Site so we can improve it.",
-    canDisable: "Yes",
+    category: "Analíticas",
+    purpose: "Nos ayudan a entender cómo los visitantes usan el Sitio para poder mejorarlo.",
+    canDisable: "Sí",
   },
   {
-    category: "Scheduling",
-    purpose: "Set by Calendly when you use the booking widget on /book-a-call.",
-    canDisable: "Yes (disables booking widget)",
+    category: "Agendamiento",
+    purpose: "Configuradas por Calendly cuando usás el widget de reservas en /book-a-call.",
+    canDisable: "Sí (desactiva el widget de reservas)",
   },
 ];
 
@@ -32,33 +32,34 @@ export default function CookiesPage() {
     <section className="pt-20 pb-24 sm:pt-28">
       <Container className="max-w-2xl">
         <p className="eyebrow mb-4">Legal</p>
-        <h1 className="text-4xl font-medium tracking-tight text-bone">Cookie Policy</h1>
-        <p className="mt-3 text-sm text-bone-dim">Last updated: June 1, 2026</p>
+        <h1 className="text-4xl font-medium tracking-tight text-bone">Política de Cookies</h1>
+        <p className="mt-3 text-sm text-bone-dim">Última actualización: 1 de junio de 2026</p>
 
         <div className="prose prose-invert mt-10 max-w-none prose-headings:text-bone prose-p:leading-relaxed prose-p:text-bone-muted prose-li:text-bone-muted prose-strong:text-bone">
           <p>
-            This Cookie Policy explains how {brand.legalName} ("Volta")
-            uses cookies and similar tracking technologies on {brand.domain}.
+            Esta Política de Cookies explica cómo {brand.legalName} ("Volta")
+            usa cookies y tecnologías de seguimiento similares en{" "}
+            {brand.domain}.
           </p>
 
-          <h2>1. What Are Cookies</h2>
+          <h2>1. Qué son las cookies</h2>
           <p>
-            Cookies are small text files stored on your device when you
-            visit a website. They help websites remember information about
-            your visit, which can make it easier to use the site and more
-            useful to you.
+            Las cookies son pequeños archivos de texto que se guardan en tu
+            dispositivo cuando visitás un sitio web. Ayudan a los sitios a
+            recordar información sobre tu visita, lo que puede facilitar el
+            uso del sitio y hacerlo más útil para vos.
           </p>
 
-          <h2>2. Cookies We Use</h2>
+          <h2>2. Cookies que usamos</h2>
         </div>
 
         <div className="mt-6 overflow-hidden rounded-xl border border-ink-600">
           <table className="w-full text-left text-sm">
             <thead className="bg-ink-800">
               <tr>
-                <th className="px-4 py-3 font-medium text-bone">Category</th>
-                <th className="px-4 py-3 font-medium text-bone">Purpose</th>
-                <th className="px-4 py-3 font-medium text-bone">Can be disabled?</th>
+                <th className="px-4 py-3 font-medium text-bone">Categoría</th>
+                <th className="px-4 py-3 font-medium text-bone">Propósito</th>
+                <th className="px-4 py-3 font-medium text-bone">¿Se puede desactivar?</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-ink-700">
@@ -74,33 +75,36 @@ export default function CookiesPage() {
         </div>
 
         <div className="prose prose-invert mt-10 max-w-none prose-headings:text-bone prose-p:leading-relaxed prose-p:text-bone-muted prose-li:text-bone-muted prose-strong:text-bone">
-          <h2>3. Managing Cookies</h2>
+          <h2>3. Gestión de cookies</h2>
           <p>
-            You can control and delete cookies through your browser
-            settings. Most browsers allow you to refuse cookies entirely or
-            be notified when a cookie is being set. Disabling essential
-            cookies may affect Site functionality; disabling analytics or
-            scheduling cookies will not affect your ability to browse the
-            Site or contact us directly.
+            Podés controlar y eliminar cookies desde la configuración de tu
+            navegador. La mayoría de los navegadores te permiten rechazar
+            cookies por completo o recibir un aviso cuando se está
+            configurando una cookie. Desactivar las cookies esenciales
+            puede afectar el funcionamiento del Sitio; desactivar las
+            cookies analíticas o de agendamiento no afectará tu capacidad
+            de navegar el Sitio o contactarnos directamente.
           </p>
 
-          <h2>4. Third-Party Cookies</h2>
+          <h2>4. Cookies de terceros</h2>
           <p>
-            Some cookies are set by third-party services embedded on our
-            Site, such as Calendly for scheduling. These third parties are
-            responsible for their own cookie practices, which are governed
-            by their respective privacy and cookie policies.
+            Algunas cookies son configuradas por servicios de terceros
+            incorporados en nuestro Sitio, como Calendly para agendamiento.
+            Estos terceros son responsables de sus propias prácticas de
+            cookies, que se rigen por sus respectivas políticas de
+            privacidad y cookies.
           </p>
 
-          <h2>5. Changes to This Policy</h2>
+          <h2>5. Cambios a esta política</h2>
           <p>
-            We may update this Cookie Policy periodically to reflect changes
-            in the cookies we use or for legal, operational, or regulatory reasons.
+            Podemos actualizar esta Política de Cookies periódicamente para
+            reflejar cambios en las cookies que usamos o por razones
+            legales, operativas o regulatorias.
           </p>
 
-          <h2>6. Contact</h2>
+          <h2>6. Contacto</h2>
           <p>
-            Questions about this Cookie Policy can be directed to{" "}
+            Las consultas sobre esta Política de Cookies pueden dirigirse a{" "}
             <a href={`mailto:${brand.email}`}>{brand.email}</a>.
           </p>
         </div>

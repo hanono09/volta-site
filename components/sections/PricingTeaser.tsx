@@ -12,10 +12,10 @@ export function PricingTeaser() {
     <section className="py-20 sm:py-28">
       <Container>
         <SectionHeading
-          eyebrow="Pricing"
+          eyebrow="Precios"
           align="center"
-          title="Fixed scope. Fixed price. No surprises."
-          description="Three tiers built around how much of your operation needs automating — not how many hours we can bill."
+          title="Alcance fijo. Precio fijo. Sin sorpresas."
+          description="Tres planes armados según cuánto de tu operación necesita automatizarse — no según cuántas horas podamos facturar."
         />
 
         <div className="mt-14 grid grid-cols-1 gap-5 lg:grid-cols-3">
@@ -34,7 +34,7 @@ export function PricingTeaser() {
             >
               {tier.highlighted && (
                 <span className="absolute -top-3 left-7 rounded-full bg-volt-500 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-white">
-                  Most popular
+                  Más elegido
                 </span>
               )}
               <h3 className="text-lg font-medium text-bone">{tier.name}</h3>

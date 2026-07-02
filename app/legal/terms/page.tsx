@@ -4,8 +4,8 @@ import { buildMetadata } from "@/lib/seo";
 import { brand } from "@/lib/data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Terms of Service",
-  description: `The terms governing use of ${brand.domain} and engagement of ${brand.name}'s services.`,
+  title: "Términos de Servicio",
+  description: `Los términos que rigen el uso de ${brand.domain} y la contratación de los servicios de ${brand.name}.`,
   path: "/legal/terms",
 });
 
@@ -14,128 +14,137 @@ export default function TermsPage() {
     <section className="pt-20 pb-24 sm:pt-28">
       <Container className="max-w-2xl">
         <p className="eyebrow mb-4">Legal</p>
-        <h1 className="text-4xl font-medium tracking-tight text-bone">Terms of Service</h1>
-        <p className="mt-3 text-sm text-bone-dim">Last updated: June 1, 2026</p>
+        <h1 className="text-4xl font-medium tracking-tight text-bone">Términos de Servicio</h1>
+        <p className="mt-3 text-sm text-bone-dim">Última actualización: 1 de junio de 2026</p>
 
         <div className="prose prose-invert mt-10 max-w-none prose-headings:text-bone prose-p:leading-relaxed prose-p:text-bone-muted prose-li:text-bone-muted prose-strong:text-bone">
           <p>
-            These Terms of Service ("Terms") govern your use of{" "}
-            {brand.domain} (the "Site") and any services provided by{" "}
-            {brand.legalName} ("Volta," "we," "us"). By accessing the Site or
-            engaging our services, you agree to these Terms.
+            Estos Términos de Servicio ("Términos") rigen tu uso de{" "}
+            {brand.domain} (el "Sitio") y cualquier servicio brindado por{" "}
+            {brand.legalName} ("Volta," "nosotros"). Al acceder al Sitio o
+            contratar nuestros servicios, aceptás estos Términos.
           </p>
 
-          <h2>1. Services</h2>
+          <h2>1. Servicios</h2>
           <p>
-            Volta provides AI automation, chatbot development, website and
-            landing page design, CRM integration, and related digital
-            services ("Services"). The specific scope, timeline, and
-            deliverables for any engagement will be defined in a separate
-            written proposal or service agreement signed by both parties,
-            which takes precedence over these general Terms in the event of
-            conflict.
+            Volta brinda automatización con IA, desarrollo de chatbots,
+            diseño de sitios web y landing pages, integración de CRM, y
+            servicios digitales relacionados ("Servicios"). El alcance,
+            cronograma y entregables específicos de cada proyecto se
+            definirán en una propuesta o contrato de servicio por escrito
+            firmado por ambas partes, el cual tiene prioridad sobre estos
+            Términos generales en caso de conflicto.
           </p>
 
-          <h2>2. Engagement and Payment</h2>
+          <h2>2. Contratación y pago</h2>
           <ul>
             <li>
-              Projects are quoted on a fixed-scope basis unless otherwise
-              agreed in writing. A deposit (typically 50%) is required to
-              begin work, with the remaining balance due upon completion or
-              per the schedule outlined in the signed proposal.
+              Los proyectos se cotizan con alcance fijo salvo que se acuerde
+              lo contrario por escrito. Se requiere un depósito
+              (típicamente 50%) para comenzar el trabajo, con el saldo
+              restante a pagar al completar el proyecto o según el
+              cronograma detallado en la propuesta firmada.
             </li>
             <li>
-              Monthly maintenance and retainer plans are billed in advance
-              and renew automatically until cancelled with 30 days' written notice.
+              Los planes mensuales de mantenimiento y retainer se facturan
+              por adelantado y se renuevan automáticamente hasta que se
+              cancelen con 30 días de aviso por escrito.
             </li>
             <li>
-              Late payments may result in a pause of active work and, for
-              amounts more than 30 days overdue, may accrue interest at 1.5%
-              per month or the maximum rate permitted by law.
+              Los pagos atrasados pueden resultar en una pausa del trabajo
+              activo y, para montos con más de 30 días de mora, pueden
+              acumular intereses del 1.5% mensual o la tasa máxima permitida
+              por ley.
             </li>
           </ul>
 
-          <h2>3. Client Responsibilities</h2>
+          <h2>3. Responsabilidades del cliente</h2>
           <p>
-            Timely delivery depends on the client providing necessary
-            access, content, feedback, and approvals within agreed
-            timeframes. Delays caused by the client may extend project
-            timelines accordingly and do not constitute a breach by Volta.
+            La entrega a tiempo depende de que el cliente brinde el acceso,
+            contenido, feedback y aprobaciones necesarios dentro de los
+            plazos acordados. Las demoras causadas por el cliente pueden
+            extender los cronogramas del proyecto correspondientemente y no
+            constituyen un incumplimiento por parte de Volta.
           </p>
 
-          <h2>4. Intellectual Property and Ownership</h2>
+          <h2>4. Propiedad intelectual y titularidad</h2>
           <p>
-            Upon final payment, all custom code, designs, workflows, and
-            content created specifically for the client become the
-            exclusive property of the client. This does not include Volta's
-            pre-existing tools, frameworks, or general methodologies, which
-            Volta retains the right to reuse across other engagements.
-            Third-party software, platforms, and licenses (e.g., CRM
-            subscriptions, automation platform accounts) remain subject to
-            their respective providers' terms.
+            Al efectuarse el pago final, todo el código a medida, diseños,
+            flujos y contenido creado específicamente para el cliente pasan
+            a ser propiedad exclusiva del cliente. Esto no incluye las
+            herramientas, frameworks o metodologías generales preexistentes
+            de Volta, que Volta conserva el derecho de reutilizar en otros
+            proyectos. El software, plataformas y licencias de terceros
+            (por ejemplo, suscripciones a CRM, cuentas de plataformas de
+            automatización) permanecen sujetos a los términos de sus
+            respectivos proveedores.
           </p>
 
-          <h2>5. Revisions</h2>
+          <h2>5. Revisiones</h2>
           <p>
-            Each pricing tier includes a defined number of revision rounds
-            as specified in the proposal. Requests beyond that scope, or
-            changes to the originally agreed scope of work, will be quoted
-            separately.
+            Cada plan de precios incluye una cantidad definida de rondas de
+            revisión según lo especificado en la propuesta. Los pedidos que
+            excedan ese alcance, o cambios al alcance de trabajo
+            originalmente acordado, se cotizarán por separado.
           </p>
 
-          <h2>6. Warranties and Support</h2>
+          <h2>6. Garantías y soporte</h2>
           <p>
-            Volta warrants that delivered work will function substantially
-            as described in the signed proposal. Post-launch support
-            windows (30–90 days depending on tier) cover defect
-            correction at no additional cost. This warranty does not cover
-            issues arising from third-party platform changes, client-made
-            modifications, or use outside the intended scope.
+            Volta garantiza que el trabajo entregado funcionará
+            sustancialmente como se describe en la propuesta firmada. Las
+            ventanas de soporte post-lanzamiento (30 a 90 días según el
+            plan) cubren la corrección de defectos sin costo adicional.
+            Esta garantía no cubre problemas derivados de cambios en
+            plataformas de terceros, modificaciones hechas por el cliente,
+            o uso fuera del alcance previsto.
           </p>
 
-          <h2>7. Limitation of Liability</h2>
+          <h2>7. Limitación de responsabilidad</h2>
           <p>
-            To the maximum extent permitted by law, Volta's total liability
-            for any claim arising from these Terms or our Services is
-            limited to the total amount paid by the client for the
-            Services giving rise to the claim. Volta is not liable for
-            indirect, incidental, or consequential damages, including lost
-            profits or data, arising from use of delivered systems.
+            En la máxima medida permitida por la ley, la responsabilidad
+            total de Volta por cualquier reclamo derivado de estos Términos
+            o nuestros Servicios se limita al monto total pagado por el
+            cliente por los Servicios que originaron el reclamo. Volta no
+            es responsable por daños indirectos, incidentales o
+            consecuentes, incluyendo pérdida de ganancias o datos,
+            derivados del uso de los sistemas entregados.
           </p>
 
-          <h2>8. Termination</h2>
+          <h2>8. Terminación</h2>
           <p>
-            Either party may terminate an active engagement with 14 days'
-            written notice. Upon termination, the client is responsible for
-            payment for all work completed up to the termination date.
+            Cualquiera de las partes puede dar por terminado un proyecto
+            activo con 14 días de aviso por escrito. Al finalizar, el
+            cliente es responsable del pago de todo el trabajo completado
+            hasta la fecha de terminación.
           </p>
 
-          <h2>9. Confidentiality</h2>
+          <h2>9. Confidencialidad</h2>
           <p>
-            Both parties agree to keep confidential any non-public business,
-            technical, or financial information disclosed during the course
-            of the engagement, and will sign a mutual NDA upon request
-            prior to discovery calls involving sensitive information.
+            Ambas partes acuerdan mantener la confidencialidad de cualquier
+            información comercial, técnica o financiera no pública
+            divulgada durante el proyecto, y firmarán un acuerdo mutuo de
+            confidencialidad a pedido, antes de cualquier llamada de
+            descubrimiento que involucre información sensible.
           </p>
 
-          <h2>10. Governing Law</h2>
+          <h2>10. Ley aplicable</h2>
           <p>
-            These Terms are governed by the laws of the State of Texas,
-            without regard to conflict-of-law principles, and any disputes
-            will be resolved in the state or federal courts located in
-            Travis County, Texas.
+            Estos Términos se rigen por las leyes del Estado de Texas, sin
+            considerar principios de conflicto de leyes, y cualquier
+            disputa se resolverá en los tribunales estatales o federales
+            ubicados en el condado de Travis, Texas.
           </p>
 
-          <h2>11. Changes to These Terms</h2>
+          <h2>11. Cambios a estos Términos</h2>
           <p>
-            We may update these Terms from time to time. Continued use of
-            the Site or Services after changes are posted constitutes
-            acceptance of the revised Terms.
+            Podemos actualizar estos Términos de tanto en tanto. El uso
+            continuado del Sitio o los Servicios después de que se publiquen
+            cambios constituye la aceptación de los Términos revisados.
           </p>
 
-          <h2>12. Contact</h2>
+          <h2>12. Contacto</h2>
           <p>
-            Questions about these Terms can be directed to{" "}
+            Las consultas sobre estos Términos pueden dirigirse a{" "}
             <a href={`mailto:${brand.email}`}>{brand.email}</a>.
           </p>
         </div>

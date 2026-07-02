@@ -7,7 +7,7 @@ import { blogPosts } from "@/lib/data";
 
 export const metadata: Metadata = buildMetadata({
   title: "Blog",
-  description: "Insights on AI automation, chatbots, and operations from the Volta team.",
+  description: "Ideas sobre automatización con IA, chatbots y operaciones del equipo de Volta.",
   path: "/blog",
 });
 
@@ -17,7 +17,7 @@ export default function BlogPage() {
       <Container className="max-w-3xl">
         <p className="eyebrow mb-4">Blog</p>
         <h1 className="text-4xl font-medium leading-tight tracking-tight text-bone sm:text-5xl">
-          Notes on automation, operations, and AI that actually ships.
+          Notas sobre automatización, operaciones e IA que realmente se implementa.
         </h1>
 
         <div className="mt-14 divide-y divide-ink-700 border-t border-ink-700">

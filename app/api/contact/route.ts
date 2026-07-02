@@ -2,12 +2,12 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
 const contactSchema = z.object({
-  name: z.string().min(2, "Name is too short").max(120),
-  email: z.string().email("Enter a valid email address"),
+  name: z.string().min(2, "El nombre es muy corto").max(120),
+  email: z.string().email("Ingresá un email válido"),
   company: z.string().max(120).optional(),
   budget: z.string().optional(),
-  message: z.string().min(10, "Tell us a bit more (min 10 characters)").max(5000),
-  // honeypot field — bots fill this, humans never see it
+  message: z.string().min(10, "Contanos un poco más (mínimo 10 caracteres)").max(5000),
+  // campo trampa — los bots lo completan, los humanos nunca lo ven
   website: z.string().max(0).optional(),
 });
 
@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
     if (!parsed.success) {
       return NextResponse.json(
-        { error: parsed.error.issues[0]?.message || "Invalid submission" },
+        { error: parsed.error.issues[0]?.message || "Envío inválido" },
         { status: 400 }
       );
     }
@@ -26,33 +26,34 @@ export async function POST(req: NextRequest) {
     const { name, email, company, budget, message } = parsed.data;
 
     const apiKey = process.env.RESEND_API_KEY;
-    const notifyEmail = process.env.NOTIFY_EMAIL || "hello@voltaautomation.com";
+    const notifyEmail = process.env.NOTIFY_EMAIL || "hola@voltaautomation.com";
 
     if (apiKey) {
-      // Lazily import so the build doesn't fail if the package isn't installed yet
+      // Import diferido para que el build no falle si el paquete todavía no está instalado
       const { Resend } = await import("resend");
       const resend = new Resend(apiKey);
 
       await resend.emails.send({
-        from: "Volta Website <notifications@voltaautomation.com>",
+        from: "Sitio de Volta <notifications@voltaautomation.com>",
         to: notifyEmail,
-     reply_to: email,
-        subject: `New inquiry from ${name}${company ? ` (${company})` : ""}`,
+        reply_to: email,
+        subject: `Nueva consulta de ${name}${company ? ` (${company})` : ""}`,
         text: [
-          `Name: ${name}`,
+          `Nombre: ${name}`,
           `Email: ${email}`,
-          company ? `Company: ${company}` : null,
-          budget ? `Budget: ${budget}` : null,
+          company ? `Empresa: ${company}` : null,
+          budget ? `Presupuesto: ${budget}` : null,
           "",
-          "Message:",
+          "Mensaje:",
           message,
         ]
           .filter(Boolean)
           .join("\n"),
       });
     } else {
-      // No email provider configured yet — log so submissions are never silently lost.
-      console.log("[contact] New submission (RESEND_API_KEY not set):", {
+      // Todavía no hay proveedor de email configurado — se registra en consola
+      // para que ninguna consulta se pierda silenciosamente.
+      console.log("[contact] Nueva consulta (RESEND_API_KEY no configurada):", {
         name,
         email,
         company,
@@ -64,6 +65,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true });
   } catch (error) {
     console.error("[contact] error", error);
-    return NextResponse.json({ error: "Something went wrong. Please try again." }, { status: 500 });
+    return NextResponse.json({ error: "Algo salió mal. Por favor, intentá de nuevo." }, { status: 500 });
   }
 }

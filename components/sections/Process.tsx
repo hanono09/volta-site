@@ -10,9 +10,9 @@ export function Process() {
     <section className="py-20 sm:py-28">
       <Container>
         <SectionHeading
-          eyebrow="How we work"
-          title="Five stages. Zero guesswork."
-          description="Every engagement follows the same disciplined process — because the systems we build only work if the process building them does too."
+          eyebrow="Cómo trabajamos"
+          title="Cinco etapas. Cero incertidumbre."
+          description="Cada proyecto sigue el mismo proceso disciplinado — porque los sistemas que construimos solo funcionan si el proceso para construirlos también funciona."
         />
 
         <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-ink-600 bg-ink-600 md:grid-cols-5">

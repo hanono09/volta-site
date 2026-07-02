@@ -22,9 +22,9 @@ export function FAQSection({
       <Container className="max-w-3xl">
         {showHeading && (
           <SectionHeading
-            eyebrow="FAQ"
-            title="Questions, answered."
-            description="Everything we get asked before someone signs off on a project."
+            eyebrow="Preguntas frecuentes"
+            title="Todo, respondido."
+            description="Todo lo que nos preguntan antes de que alguien confirme un proyecto."
           />
         )}
 

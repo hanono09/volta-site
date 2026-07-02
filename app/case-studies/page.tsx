@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo";
 import { caseStudies } from "@/lib/data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Case Studies",
+  title: "Casos de éxito",
   description:
-    "Real client results from Volta's AI automation, chatbot, and website projects — across real estate, healthcare, logistics, and fitness.",
+    "Resultados reales de proyectos de automatización con IA, chatbots y sitios web de Volta — en bienes raíces, salud, logística y fitness.",
   path: "/case-studies",
 });
 
@@ -18,13 +18,13 @@ export default function CaseStudiesPage() {
     <>
       <section className="pt-20 pb-10 sm:pt-28">
         <Container className="max-w-3xl">
-          <p className="eyebrow mb-4">Case Studies</p>
+          <p className="eyebrow mb-4">Casos de éxito</p>
           <h1 className="text-4xl font-medium leading-tight tracking-tight text-bone sm:text-5xl">
-            Systems we've shipped, and what they actually changed.
+            Sistemas que ya entregamos, y qué cambiaron realmente.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-bone-muted">
-            Every number below comes from client reporting, tracked from
-            launch. No estimates, no "up to" projections.
+            Cada número de abajo viene de reportes reales de clientes,
+            medidos desde el lanzamiento. Sin estimaciones, sin proyecciones "hasta".
           </p>
         </Container>
       </section>

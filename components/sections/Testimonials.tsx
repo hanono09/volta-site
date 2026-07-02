@@ -13,9 +13,9 @@ export function Testimonials({ limit }: { limit?: number }) {
     <section className="py-20 sm:py-28">
       <Container>
         <SectionHeading
-          eyebrow="What clients say"
+          eyebrow="Lo que dicen los clientes"
           align="center"
-          title="Don't take our word for it."
+          title="No te quedes solo con nuestra palabra."
         />
 
         <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">

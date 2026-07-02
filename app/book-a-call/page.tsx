@@ -5,16 +5,16 @@ import { CalendlyEmbed } from "@/components/sections/CalendlyEmbed";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Book a Call",
-  description: "Book a free 30-minute strategy call with Volta to map your biggest automation opportunity.",
+  title: "Reservar una llamada",
+  description: "Reservá una llamada de estrategia gratuita de 30 minutos con Volta para mapear tu mayor oportunidad de automatización.",
   path: "/book-a-call",
 });
 
 const expectations = [
-  "We review your current process or website before the call",
-  "You'll leave with at least one concrete automation idea — even if we never work together",
-  "No generic sales deck, no pressure to decide on the call",
-  "If it's a fit, we'll outline next steps and a rough timeline",
+  "Revisamos tu proceso o sitio web actual antes de la llamada",
+  "Te vas con al menos una idea concreta de automatización — incluso si nunca trabajamos juntos",
+  "Sin presentación de ventas genérica, sin presión para decidir en la llamada",
+  "Si es un buen fit, definimos los próximos pasos y un cronograma aproximado",
 ];
 
 export default function BookACallPage() {
@@ -23,14 +23,14 @@ export default function BookACallPage() {
       <Container>
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="eyebrow mb-4">Book a call</p>
+            <p className="eyebrow mb-4">Reservar una llamada</p>
             <h1 className="text-4xl font-medium leading-tight tracking-tight text-bone sm:text-5xl">
-              30 minutes. One clear answer.
+              30 minutos. Una respuesta clara.
             </h1>
             <p className="mt-5 text-base leading-relaxed text-bone-muted">
-              Pick a time that works. We'll spend the call understanding
-              your operation and tell you plainly whether — and how — AI
-              automation makes sense for you.
+              Elegí un horario que te quede cómodo. Vamos a dedicar la
+              llamada a entender tu operación y decirte con claridad si —
+              y cómo — tiene sentido la automatización con IA para vos.
             </p>
 
             <ul className="mt-8 space-y-3">
