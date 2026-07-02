@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
       await resend.emails.send({
         from: "Volta Website <notifications@voltaautomation.com>",
         to: notifyEmail,
-        replyTo: email,
+     reply_to: email,
         subject: `New inquiry from ${name}${company ? ` (${company})` : ""}`,
         text: [
           `Name: ${name}`,
