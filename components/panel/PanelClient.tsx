@@ -4,12 +4,13 @@ import { useState, useMemo } from "react";
 import { prospectos, infoWeb, Estado } from "@/lib/prospectos-data";
 import { CallScript } from "@/components/panel/CallScript";
 
-type Tab = "prospectos" | "guion" | "infoweb" | "resumen";
+type Tab = "prospectos" | "guion" | "infoweb" | "documentos" | "resumen";
 
 const TABS: { id: Tab; label: string }[] = [
   { id: "prospectos", label: "Prospectos" },
   { id: "guion", label: "Guión de Llamada" },
   { id: "infoweb", label: "Info para la Web" },
+  { id: "documentos", label: "Documentos" },
   { id: "resumen", label: "Resumen" },
 ];
 
@@ -210,6 +211,34 @@ export function PanelClient() {
           </div>
         )}
 
+        {tab === "documentos" && (
+          <div>
+            <h1 className="text-2xl font-medium tracking-tight text-bone">Documentos</h1>
+            <p className="mt-2 mb-6 text-sm text-bone-muted">
+              Plantillas listas para descargar y completar con los datos de cada cliente.
+            </p>
+
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <DocCard
+                title="Propuesta Comercial"
+                description="El desafío, la solución, cronograma en tabla, inversión y próximos pasos. Se envía después de la llamada de descubrimiento."
+                href="/docs/propuesta-comercial-volta.docx"
+              />
+              <DocCard
+                title="Contrato de Prestación de Servicios"
+                description="10 cláusulas: objeto, alcance, plazo, precio y pago, propiedad intelectual, confidencialidad, garantía, terminación y jurisdicción. Se envía cuando el cliente confirma la propuesta."
+                href="/docs/contrato-servicio-volta.docx"
+              />
+            </div>
+
+            <div className="mt-6 rounded-xl border border-ink-600 bg-ink-800 p-5 text-sm text-bone-muted">
+              Los campos en <span className="italic text-volt-300">violeta y entre corchetes</span> (como{" "}
+              <span className="italic text-volt-300">[Nombre del cliente]</span>) son los que se completan
+              distinto en cada proyecto — el resto del texto queda fijo.
+            </div>
+          </div>
+        )}
+
         {tab === "resumen" && (
           <div>
             <h1 className="text-2xl font-medium tracking-tight text-bone">Resumen</h1>
@@ -226,6 +255,30 @@ export function PanelClient() {
           </div>
         )}
       </main>
+    </div>
+  );
+}
+
+function DocCard({
+  title,
+  description,
+  href,
+}: {
+  title: string;
+  description: string;
+  href: string;
+}) {
+  return (
+    <div className="flex flex-col rounded-xl border border-ink-600 bg-ink-800 p-5">
+      <h3 className="text-base font-medium text-bone">{title}</h3>
+      <p className="mt-2 flex-1 text-sm leading-relaxed text-bone-muted">{description}</p>
+      <a
+        href={href}
+        download
+        className="mt-4 inline-flex w-fit items-center gap-2 rounded-full bg-bone px-4 py-2 text-xs font-medium text-ink-900 transition-colors hover:bg-volt-100"
+      >
+        Descargar .docx
+      </a>
     </div>
   );
 }
