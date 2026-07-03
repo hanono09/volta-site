@@ -3,6 +3,8 @@
 import { useState, useMemo } from "react";
 import { prospectos, infoWeb, Estado } from "@/lib/prospectos-data";
 import { CallScript } from "@/components/panel/CallScript";
+import { ProposalDoc } from "@/components/panel/ProposalDoc";
+import { ContractDoc } from "@/components/panel/ContractDoc";
 
 type Tab = "prospectos" | "guion" | "infoweb" | "documentos" | "resumen";
 
@@ -43,6 +45,7 @@ function fmtDate(d: string) {
 export function PanelClient() {
   const [tab, setTab] = useState<Tab>("prospectos");
   const [search, setSearch] = useState("");
+  const [docView, setDocView] = useState<null | "propuesta" | "contrato">(null);
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
@@ -211,11 +214,11 @@ export function PanelClient() {
           </div>
         )}
 
-        {tab === "documentos" && (
+        {tab === "documentos" && docView === null && (
           <div>
             <h1 className="text-2xl font-medium tracking-tight text-bone">Documentos</h1>
             <p className="mt-2 mb-6 text-sm text-bone-muted">
-              Plantillas listas para descargar y completar con los datos de cada cliente.
+              Plantillas listas para leer acá mismo o descargar y completar con los datos de cada cliente.
             </p>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -223,11 +226,13 @@ export function PanelClient() {
                 title="Propuesta Comercial"
                 description="El desafío, la solución, cronograma en tabla, inversión y próximos pasos. Se envía después de la llamada de descubrimiento."
                 href="/docs/propuesta-comercial-volta.docx"
+                onRead={() => setDocView("propuesta")}
               />
               <DocCard
                 title="Contrato de Prestación de Servicios"
                 description="10 cláusulas: objeto, alcance, plazo, precio y pago, propiedad intelectual, confidencialidad, garantía, terminación y jurisdicción. Se envía cuando el cliente confirma la propuesta."
                 href="/docs/contrato-servicio-volta.docx"
+                onRead={() => setDocView("contrato")}
               />
             </div>
 
@@ -235,6 +240,33 @@ export function PanelClient() {
               Los campos en <span className="italic text-volt-300">violeta y entre corchetes</span> (como{" "}
               <span className="italic text-volt-300">[Nombre del cliente]</span>) son los que se completan
               distinto en cada proyecto — el resto del texto queda fijo.
+            </div>
+          </div>
+        )}
+
+        {tab === "documentos" && docView !== null && (
+          <div>
+            <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+              <button
+                onClick={() => setDocView(null)}
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-bone-muted hover:text-bone"
+              >
+                ← Volver a Documentos
+              </button>
+              <a
+                href={
+                  docView === "propuesta"
+                    ? "/docs/propuesta-comercial-volta.docx"
+                    : "/docs/contrato-servicio-volta.docx"
+                }
+                download
+                className="inline-flex items-center gap-2 rounded-full border border-ink-500 px-4 py-2 text-xs font-medium text-bone transition-colors hover:border-volt-400 hover:text-volt-300"
+              >
+                Descargar .docx
+              </a>
+            </div>
+            <div className="rounded-2xl border border-ink-600 bg-ink-900 p-6 sm:p-10">
+              {docView === "propuesta" ? <ProposalDoc /> : <ContractDoc />}
             </div>
           </div>
         )}
@@ -263,22 +295,32 @@ function DocCard({
   title,
   description,
   href,
+  onRead,
 }: {
   title: string;
   description: string;
   href: string;
+  onRead: () => void;
 }) {
   return (
     <div className="flex flex-col rounded-xl border border-ink-600 bg-ink-800 p-5">
       <h3 className="text-base font-medium text-bone">{title}</h3>
       <p className="mt-2 flex-1 text-sm leading-relaxed text-bone-muted">{description}</p>
-      <a
-        href={href}
-        download
-        className="mt-4 inline-flex w-fit items-center gap-2 rounded-full bg-bone px-4 py-2 text-xs font-medium text-ink-900 transition-colors hover:bg-volt-100"
-      >
-        Descargar .docx
-      </a>
+      <div className="mt-4 flex flex-wrap gap-2">
+        <button
+          onClick={onRead}
+          className="inline-flex items-center gap-2 rounded-full bg-bone px-4 py-2 text-xs font-medium text-ink-900 transition-colors hover:bg-volt-100"
+        >
+          Leer en la web
+        </button>
+        <a
+          href={href}
+          download
+          className="inline-flex items-center gap-2 rounded-full border border-ink-500 px-4 py-2 text-xs font-medium text-bone transition-colors hover:border-volt-400 hover:text-volt-300"
+        >
+          Descargar .docx
+        </a>
+      </div>
     </div>
   );
 }
